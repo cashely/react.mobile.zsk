@@ -1,0 +1,76 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+html,body{
+  width: 100%;
+}
+header{
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 2.6rem;
+  background-color: #07a2e9;
+  align-items: center;
+}
+.header-left{
+  width: 3rem;
+}
+.header-right{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.header-right form{
+  display: flex;
+}
+.header-right input{
+  flex:1;
+  border-radius: 0.3rem;
+  border:1px solid #d9d9d9;
+  padding: .5rem;
+}
+.main{
+  padding-top: 2.6rem;
+}
+.main-header{
+  font-weight: bold;
+}
+.main-block dl{
+  display: flex;
+  margin: 0;
+  border-bottom:1px dashed #d9d9d9;
+  line-height: 3;
+  text-align: center;
+}
+.main-block dt{
+  width: 25%;
+  font-size: 0.75rem;
+}
+.main-block dd{
+  margin: 0;
+  flex: 1;
+  border-left:1px solid #fff;
+  font-size: 0.8rem;
+}
+.main-header{
+  background-color: #d9d9d9;
+}
+.header-left button{
+  border-width: 0;
+  color: #fff;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.header-right button{
+  border-width: 0;
+  color: #fff;
+  background-color: inherit;
+  height: 100%;
+  font-size: .8rem;
+  display: block;
+}
