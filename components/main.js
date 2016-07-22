@@ -1,76 +1,102 @@
 import React,{Component} from 'react';
 
+import {connect} from 'react-redux';
+
 var InfiniteScroll = require('react-infinite-scroll')(React);
-export default class Mian extends Component{
+
+import Loading from './loading';
+
+import {Link} from 'react-router';
+
+
+class Main extends Component{
   render(){
     return (
       <div className="main">
-          <Mainblock />
+          <Mainblock dispatch = {this.props.dispatch} queryStr={this.props.queryStr} data={this.props.data} pageNo={this.props.pageNo} isLoading={this.props.isLoading} top={this.props.top} />
       </div>
     )
   }
 }
-
-
 class Mainblock extends Component{
   constructor(props){
     super(props);
-    this.state={
-      data:[],
-      page:1,
-      isLoading:false
-    }
     this.handleLoad=this.handleLoad.bind(this);
-
   }
-  componentWillMount(){
+  componentDidMount(){
     this.handleLoad();
     var desUnder = 0;
-    $(window).on('scroll',() => {
-      desUnder = $('.main').outerHeight()-$(window).scrollTop()-$(window).height();
+    window.addEventListener('scroll',() => {
+      desUnder = $(this.refs.main).outerHeight()-$(window).scrollTop()-$(window).height();
       if(desUnder <= 0){
-        this.setState({
-          isLoading : true
-        });
+        if(this.props.isLoading) return false;
+          this.props.dispatch({
+            type:'SHOWLOADING'
+          });
         setTimeout(()=>{
           this.handleLoad();
-        },1000)
+        },0)
       }
-    })
+    },false)
   }
   handleLoad(){
     const _self = this;
     $.ajax({
-      url:'../json/data.json',
+      url:'http://192.168.1.235:8082/imkb/immoapp/searchApp',
+      data:{
+        pageNo: this.props.pageNo,
+        pageSize: 20,
+        queryStr:this.props.queryStr
+      },
       success:function(res){
-        _self.setState({
-          data:_self.state.data.concat(res.root),
-          page:_self.state.page+1,
-          isLoading:false
+        _self.props.dispatch({
+          type:'PAGE',
+          pageNo:_self.props.pageNo + 1
         })
+        _self.props.dispatch({
+          type:'ADDDATA',
+          data:res.rows
+        })
+        setTimeout(()=>{
+          _self.props.dispatch({
+            type:'UNSHOWLOADING'
+          });
+        },0);
       }
     })
   }
   render(){
-    var results = this.state.data.map(function(e,s){
-          return (<dl key={e.type+s}><dt>{e.type}</dt><dd>{e.title}</dd></dl>);
+    console.log(this.props.data);
+    var results = this.props.data.map(function(e,s){
+          return (
+            <Link to={`page/${e.id}`}  key={e.id+s}>
+              <dl>
+                <dt><i style={{marginRight:'5px',color:'#797979'}} className="fa fa-lg fa-book"></i></dt>
+                <dd><span dangerouslySetInnerHTML={{__html:e.genericName}}></span> - {e.manufacturerShort || e.fileName}</dd>
+              </dl>
+            </Link>
+          );
     });
     const _height = $(window).height();
     console.log(_height);
     return (
-        <div className="main-block" ref="main">
-          <dl className="main-header">
-            <dt>分类</dt>
-            <dd>标题</dd>
-          </dl>
-
+        <div className="main-block" ref="main" style={{paddingTop:this.props.top}}>
           <div className="main-body">
+              {this.props.isLoading ? <Loading/> : null}
               {results}
-              {this.state.isLoading ? <div>loading...</div> : null}
           </div>
-
-
         </div>
     )
   }
 }
+
+function select(state){
+  return{
+    data:state.main.data,
+    pageNo:state.main.pageNo,
+    isLoading:state.main.isLoading,
+    queryStr:state.header.queryStr
+  }
+}
+
+export default connect(select)(Main)
