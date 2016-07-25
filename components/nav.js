@@ -5,6 +5,7 @@
 import React,{Component} from 'react';
 
 import {connect} from 'react-redux';
+import {Link} from 'react-router';
 
 class Nav extends Component{
   constructor(props){
@@ -16,11 +17,11 @@ class Nav extends Component{
     var menus = (
       <div style={{padding:'10px',borderBottom:'1px solid #d9d9d9',boxShadow:'0 2px 2px #d9d9d9',fontSize:'12px'}}>
         <ul className="uk-list-line uk-list">
-          <li><a href="#">云处方医院点评</a></li>
-          <li><a href="#">云药店</a></li>
-          <li><a href="#">云健康</a></li>
-          <li><a href="#">医院药事管理软件</a></li>
-          <li><a href="#">医院医保管理软件</a></li>
+          <li><Link to="intro/bi/决策支持BI平台">决策支持BI平台</Link></li>
+          <li><Link to="">云药店</Link></li>
+          <li><Link to="">云健康</Link></li>
+          <li><Link to="intro/hpms/医院药事管理软件">医院药事管理软件</Link></li>
+          <li><Link to="intro/hmms/医院医保管理软件">医院医保管理软件</Link></li>
         </ul>
       </div>
     );

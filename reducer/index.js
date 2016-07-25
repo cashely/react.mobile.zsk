@@ -2,7 +2,7 @@ import {combineReducers} from 'redux';
 
 var defaultState = {
 	isLoading : false,
-	height:'3rem'
+	height:'4.2rem'
 }
 
 function index(state = defaultState ,action){

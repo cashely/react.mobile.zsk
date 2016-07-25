@@ -12,7 +12,7 @@ import {Link} from 'react-router';
 class Main extends Component{
   render(){
     return (
-      <div className="main">
+      <div>
           <Mainblock dispatch = {this.props.dispatch} queryStr={this.props.queryStr} data={this.props.data} pageNo={this.props.pageNo} isLoading={this.props.isLoading} top={this.props.top} />
       </div>
     )
@@ -22,25 +22,30 @@ class Mainblock extends Component{
   constructor(props){
     super(props);
     this.handleLoad=this.handleLoad.bind(this);
+    this.scrollHander = this.scrollHander.bind(this);
   }
+
+  scrollHander(){
+    var desUnder = 0;
+    desUnder = $(this.refs.main).outerHeight()-$(window).scrollTop()-$(window).height();
+    if(desUnder <= 0 && this.props.isLoading == false){
+      this.handleLoad();
+    }
+  }
+
   componentDidMount(){
     this.handleLoad();
-    var desUnder = 0;
-    window.addEventListener('scroll',() => {
-      desUnder = $(this.refs.main).outerHeight()-$(window).scrollTop()-$(window).height();
-      if(desUnder <= 0){
-        if(this.props.isLoading) return false;
-          this.props.dispatch({
-            type:'SHOWLOADING'
-          });
-        setTimeout(()=>{
-          this.handleLoad();
-        },0)
-      }
-    },false)
+    
+    window.addEventListener('scroll',this.scrollHander,false)
+  }
+  componentWillUnmount(){
+    window.removeEventListener('scroll',this.scrollHander,false)
   }
   handleLoad(){
     const _self = this;
+    this.props.dispatch({
+      type:'SHOWLOADING'
+    });
     $.ajax({
       url:'http://192.168.1.235:8082/imkb/immoapp/searchApp',
       data:{

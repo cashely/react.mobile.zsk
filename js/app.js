@@ -58,28 +58,41 @@
 
 	__webpack_require__(235);
 
-	var _redux = __webpack_require__(239);
+	__webpack_require__(239);
 
-	var _reactRedux = __webpack_require__(252);
+	var _redux = __webpack_require__(241);
 
-	var _index = __webpack_require__(265);
+	var _reactRedux = __webpack_require__(254);
+
+	var _index = __webpack_require__(267);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(266);
+	var _index3 = __webpack_require__(268);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _page = __webpack_require__(272);
+	var _page = __webpack_require__(274);
 
 	var _page2 = _interopRequireDefault(_page);
 
+	var _hpms = __webpack_require__(277);
+
+	var _hpms2 = _interopRequireDefault(_hpms);
+
+	var _bi = __webpack_require__(279);
+
+	var _bi2 = _interopRequireDefault(_bi);
+
+	var _hmms = __webpack_require__(280);
+
+	var _hmms2 = _interopRequireDefault(_hmms);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var appStore = (0, _redux.createStore)(_index2.default);
 	//导入样式
-
-
-	var appStore = (0, _redux.createStore)(_index2.default); //首页
+	//首页
 
 	//内容详细页面
 
@@ -96,6 +109,13 @@
 				_reactRouter.Route,
 				{ path: 'page' },
 				_react2.default.createElement(_reactRouter.Route, { path: ':id', component: _page2.default })
+			),
+			_react2.default.createElement(
+				_reactRouter.Route,
+				{ path: 'intro' },
+				_react2.default.createElement(_reactRouter.Route, { path: 'hpms/:title', component: _hpms2.default }),
+				_react2.default.createElement(_reactRouter.Route, { path: 'bi/:title', component: _bi2.default }),
+				_react2.default.createElement(_reactRouter.Route, { path: 'hmms/:title', component: _hmms2.default })
 			)
 		)
 	);
@@ -26766,8 +26786,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../../../node_modules/css-loader/index.js!./all.css", function() {
-				var newContent = require("!!./../../../../../../node_modules/css-loader/index.js!./all.css");
+			module.hot.accept("!!./../../../../../../node_modules/css-loader/index.js!./index.css", function() {
+				var newContent = require("!!./../../../../../../node_modules/css-loader/index.js!./index.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -26785,7 +26805,7 @@
 
 
 	// module
-	exports.push([module.id, "body{\n  margin: 0;\n  padding: 0;\n  font-size: 20px;\n}\nhtml,body{\n  width: 100%;\n}\n.main-body{\n  font-size: 1rem;\n  padding: 0 10px 0 0;\n  position: relative;\n}\nheader{\n  display: flex;\n  position: fixed;\n  top: 0;\n  z-index: 2;\n  width: 100%;\n  background-color: #07a2e9;\n  align-items: center;\n}\n.header-left{\n  align-items: center;\n  padding: 0 .5rem;\n}\n.header-right{\n  flex: 1;\n  display: flex;\n  align-items: center;\n}\n.header-title{\n  display: block;\n  position: absolute;\n  left: 0;\n  top: 0;\n  line-height: 3rem;\n  text-align: center;\n  color: #fff;\n  width: 100%;\n  z-index: -1;\n  font-weight: 500;\n  font-size: 1.2rem;\n}\n.header-left .fa-2x{\n  vertical-align: -13%;\n}\n.header-right form{\n  display: flex;\n}\n.header-right input{\n  flex:1;\n  font-size: .75rem;\n  border-radius: 0.3rem;\n  border:1px solid #d9d9d9;\n  padding: .5rem;\n}\n.main{\n\n}\n.main-block{\n  padding-top: 2.6rem;\n}\n.main-header{\n  font-weight: bold;\n}\n.main-block dl{\n  display: flex;\n  margin: 0;\n  align-items: center;\n  border-bottom:1px solid #e1e1e1;\n  line-height: 3;\n  text-align: center;\n}\n.main-block dt{\n  width: 10%;\n  font-size: 0.75rem;\n}\n.main-block dd{\n  margin: 0;\n  line-height: 1.5;\n  flex: 1;\n  padding: 1rem 0;\n  text-align: left;\n  border-left:1px solid #fff;\n  font-size: 1.1rem;\n  color: #666;\n}\n.main-header{\n  background-color: #d9d9d9;\n}\n.header-left button{\n  border-width: 0;\n  border-radius: 3px;\n  font-size: 1.2rem;\n  color: #fff;\n  background-color: inherit;\n  padding:.2rem;\n}\n.header-right button{\n  border-width: 0;\n  color: #fff;\n  padding: 0 .75rem;\n  background-color: inherit;\n  height: 100%;\n  font-size: 1.2rem;\n  display: block;\n}\n.example-enter{\n  opacity: 0.01;\n}\n.example-enter.example-enter-active{\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.example-leave{\n  opacity: 1;\n}\n.example-leave.example-leave-active{\n  opacity: 0.01;\n}\n.uk-list{\n  font-size: 1.1rem;\n  margin-bottom: 0;\n}\n.uk-list li{\n  line-height: 2;\n}\n.uk-list a{\n  color: #666;\n}\n", ""]);
+	exports.push([module.id, "/****通用*****/\nhtml {\n  font-size: 20px;\n}\nbody {\n  margin: 0px;\n  padding: 0px;\n  font-size: 14px;\n  font-family: Helvetica, Microsoft Yahei, Arial, sans-serif;\n}\np,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nul,\nli,\ndl,\ndt,\ndd {\n  margin: 0px;\n  padding: 0px;\n  list-style: none;\n}\n.lf {\n  float: left;\n}\n.rt {\n  float: right;\n}\n.clear {\n  clear: both;\n}\na {\n  text-decoration: none;\n  color: black;\n}\n.page-icon {\n  width: 1.25rem;\n  height: 100%;\n  text-align: center;\n  margin: .8rem auto 1rem auto;\n  line-height: 0px;\n}\n.page-icon li {\n  display: inline-block;\n  width: .8rem;\n  height: .8rem;\n  border-radius: 50px;\n  margin-bottom: .25rem;\n}\n.page-icon .lione {\n  background-color: #B2DFF2;\n}\n.page-icon .litwo {\n  background-color: #67C0E5;\n}\n.page-icon .lithree {\n  width: 1.2rem;\n  height: 1.2rem;\n  line-height: 1.2rem;\n  background-color: #0396D3;\n  position: relative;\n}\n.page-icon .lithree img {\n  width: .5rem;\n  height: .35rem;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  margin-left: -0.25rem;\n  margin-top: -0.01rem;\n}\n.content-title {\n  font-size: 24px;\n  color: #59BBEA;\n  text-align: center;\n  letter-spacing: 1px;\n}\n.content-title .content-text {\n  font-size: 12px;\n  margin-top: 2px;\n  color: #ACAAAA;\n}\n.main-logo {\n  text-align: center;\n  font-size: 24px;\n  margin-top: 38px;\n  opacity: 0.8;\n  color: white;\n}\n.main-text {\n  height: 90px;\n  line-height: 22px;\n  opacity: 0.8;\n  letter-spacing: 2px;\n  color: white;\n}\n.hpms {\n  width: 110px;\n  height: 30px;\n  line-height: 30px;\n  font-size: 20px;\n  color: #1A4E78;\n  font-weight: 900;\n  margin: 20px auto;\n  background: #F5F9FA;\n  opacity: 0.8;\n}\n.case-text {\n  height: 50px;\n  font-size: 23px;\n  padding-top: 28px;\n  color: #fff;\n  letter-spacing: 2px;\n}\n.case-text p {\n  font-size: 14px;\n  color: #fff;\n  margin-top: 2px;\n  letter-spacing: 1px;\n}\n#yb-case {\n  width: 100%;\n  background: #fff;\n  text-align: center;\n  padding-top: 15px;\n  margin-bottom: 65px;\n}\nfooter .app-copyright {\n  display: block;\n  width: 30rem;\n  height: 2.3rem;\n  line-height: 2.3rem;\n  margin: 0px auto;\n  background: url(\"/images/logo-blue.png\") no-repeat left center;\n  background-size: 3rem 2.15rem;\n  padding-left: 3.25rem;\n  color: #6a6a6a;\n  font-size: .8rem;\n  text-align: left;\n}\n.app-top {\n  width: 100%;\n  height: 4.4rem;\n  line-height: 4.4rem;\n  text-align: center;\n  color: white;\n  font-size: 1.5rem;\n  background: #07a2e9;\n  position: relative;\n  letter-spacing: 2px;\n}\n.app-top:before {\n  content: \"\";\n  display: table;\n}\n.navbar-toggle {\n  display: block;\n  width: 2.6rem;\n  height: 1.8rem;\n  background: url(\"/images/app-yhospital-pullDown.png\") no-repeat;\n  background-size: 100%;\n  margin-top: 1.35rem;\n  position: absolute;\n  top: 0;\n  left: 1.7rem;\n}\n.hover {\n  background: url(\"/images/app-yhospital-pullDown-hover.png\") no-repeat;\n  background-size: 100%;\n}\n.navbar-collapse {\n  display: none;\n  width: 100%;\n  background-color: #07a2e9;\n  position: absolute;\n  z-index: 3;\n  font-size: 1.3rem;\n  text-align: left;\n}\n.navbar-collapse li {\n  padding: .9rem 0px;\n  padding-left: 1.85rem;\n  border-top: 1px solid white;\n}\n.navbar-collapse li a {\n  color: white;\n}\n.app-hpms {\n  display: inline-block;\n  line-height: 100%;\n  margin: 0px auto;\n  color: #194b77;\n  background: #e2f1f9;\n  font-size: 0.9rem;\n  font-weight: 900;\n  opacity: 1;\n  padding: .25rem .3rem;\n}\n.mobile header {\n  height: 100%;\n}\n.mobile .main-logo {\n  font-size: 1.2rem;\n  color: #59BBEA;\n  opacity: 1;\n  margin-top: 0px;\n  letter-spacing: 1px;\n  margin-bottom: .5rem;\n}\n.mobile .main-text {\n  font-size: .9rem;\n  width: 34.1rem;\n  height: 100%;\n  color: #777;\n  margin: 0 auto;\n  opacity: 1;\n  line-height: 1.4rem;\n  letter-spacing: 0;\n}\n.mobile .sysm {\n  margin: 0 auto 2.9rem auto;\n  width: 100%;\n  height: 100%;\n  font-size: 1rem;\n  background: #eee;\n  color: #4F7291;\n  padding: .5rem .45rem;\n}\n.mobile .sysm .icon-sysm {\n  display: inline-block;\n  width: 1rem;\n  height: 1rem;\n  background: url(\"/images/sysm.png\") no-repeat;\n  background-size: 100% 100%;\n  vertical-align: middle;\n  margin-top: -3px;\n}\nbody {\n  width: 100%;\n  height: 100%;\n  margin-right: auto;\n  margin-left: auto;\n  text-align: center;\n}\n.main-ysgl {\n  padding-top: 3.5rem;\n  text-align: center;\n  background: url(\"/images/bg-ysgl-app.jpg\") no-repeat center top;\n  background-size: 100% 11.25rem;\n  background-color: white;\n}\n.ddn-ysgl {\n  width: 14.9rem;\n  height: 12rem;\n  display: block;\n  margin: 0 auto;\n}\n.xdn-ysgl {\n  width: 14.9rem;\n  height: 8.9rem;\n  display: block;\n  margin: 1.85rem auto 1.35rem auto;\n}\n.main-ysgl .mgtSixteen {\n  margin-top: .75rem;\n  margin-bottom: 1.5rem;\n}\n.main-ysgl .sysm-ysgl {\n  margin-top: 1.25rem;\n  margin-bottom: 2.5rem;\n}\n.main-ysgl .title {\n  margin-bottom: 2rem;\n  margin-top: 2.25rem;\n}\n.main-ysgl .box-app {\n  width: 28.15rem;\n}\n.main-ysgl .action {\n  background: #F1F1F1;\n  margin-top: 1.5rem;\n  padding-bottom: 1.25rem;\n}\n.main-ysgl .action:before {\n  content: \"\";\n  display: table;\n}\n.main-ysgl .action .content-title {\n  margin: 1.25rem auto;\n}\n.main-ysgl .action .action-app {\n  width: 35.05rem;\n  height: 20.65rem;\n}\n.core ul {\n  width: 30.65rem;\n  margin: 1.25rem auto 2rem auto;\n}\n.core ul li {\n  font-size: .9rem;\n  color: #888;\n}\n.core ul li .num {\n  font-size: 1.2em;\n  color: #59BBEA;\n  margin-bottom: .75rem;\n}\n.core ul .first {\n  margin-bottom: 1.9rem;\n}\n.core .phone-app {\n  width: 35.5rem;\n}\n.case {\n  width: 100%;\n  height: 100%;\n  background: #0396D3;\n  padding-top: 1.15rem;\n  padding-bottom: .75rem;\n}\n.case .center {\n  width: 34.1rem;\n  margin: 0 auto;\n  overflow: hidden;\n}\n.case .center .content-title {\n  margin-bottom: 1.9rem;\n  color: white;\n}\n.case .center .content-title .content-text {\n  color: white;\n}\n.case .center .case-p {\n  font-size: .9rem;\n  color: #fff;\n  line-height: 1.7rem;\n  margin-top: 1.85rem;\n  letter-spacing: 1px;\n}\n.case .center .case-p span {\n  font-size: 24px;\n  color: #FACE02;\n  margin-right: 3px;\n}\n.case .center .doctor {\n  width: 34.1rem;\n  height: 16.4rem;\n  margin: 28px auto 0 auto;\n}\n.bg-green {\n  background: #04CE2C;\n}\n.bg-red {\n  background: #FD5050;\n}\n.bg-yellow {\n  background: #F2C307;\n}\n.bg-blue {\n  background: #0B8ECA;\n}\n.mobile .main-sjpt {\n  background: url(\"/images/bg-sjpt-app.jpg\") no-repeat center top;\n  background-size: 100% 11.1rem;\n  background-color: white;\n  text-align: center;\n}\n.mobile .main-sjpt:before {\n  content: '';\n  display: table;\n}\n.mobile .main-sjpt .sjpt-timg {\n  margin: 6.45rem auto 1.5rem auto;\n  width: 16rem;\n  height: 10rem;\n  clear: both;\n}\n.mobile .main-sjpt .sjpt-timg li {\n  float: left;\n  width: 8rem;\n  height: 5rem;\n  padding: 0px 0px;\n}\n.mobile .main-sjpt .sjpt-timg li img {\n  border: 0px;\n  margin-top: .55rem;\n  width: 2.15rem;\n  height: 2.15rem;\n}\n.mobile .main-sjpt .sjpt-timg li span {\n  display: block;\n  font-size: .7rem;\n  color: #fff;\n  margin-top: .5rem;\n  opacity: 1;\n}\n.mobile .main-sjpt .main-logo {\n  margin-bottom: .9rem;\n}\n.mobile .main-sjpt .main-text {\n  margin: 18px auto;\n}\n.mobile .main-sjpt .sysm {\n  margin-bottom: 0;\n}\n.mobile .main-sjpt .page-icon {\n  margin-top: 2.25rem;\n  margin-bottom: .75rem;\n}\n.mobile .main-sjpt .yl-app {\n  width: 35.1rem;\n  height: 14.6rem;\n  margin-top: .8rem;\n  margin-bottom: 2rem;\n}\n.mobile .sjpt-progress {\n  width: 100%;\n  background: #F1F1F1;\n  text-align: center;\n  padding-top: 28px;\n}\n.mobile .sjpt-progress .center {\n  width: 36rem;\n  overflow: hidden;\n  margin: 0px auto;\n}\n.mobile .sjpt-progress .center .sjpt-content {\n  height: 100%;\n  overflow: hidden;\n  width: 34.1rem;\n  margin: 1.2rem auto 0px auto;\n}\n.mobile .sjpt-progress .center .sjpt-content .sjpt-group {\n  margin: 0;\n}\n.mobile .sjpt-progress .center .sjpt-content li {\n  float: left;\n  width: 33%;\n  margin-bottom: 1.4rem;\n}\n.mobile .sjpt-progress .center .sjpt-content li h2 {\n  font-size: 1.2rem;\n  color: #FEB415;\n  font-weight: normal;\n}\n.mobile .sjpt-progress .center .sjpt-content li p {\n  margin-top: .45rem;\n  font-size: .9rem;\n}\n.mobile .sjpt-progress .center .sjpt-content li span {\n  display: block;\n  margin-top: .45rem;\n  font-size: .9rem;\n}\n.mobile .sjpt-progress .center .sjpt-content li .mgt {\n  margin-top: 1.65rem;\n}\n.mobile .sjpt-progress .center .sjpt-content .ul-center {\n  margin: 0px 2.3rem 0px 4.4rem;\n}\n.mobile .sjpt-p {\n  font-size: 1rem;\n  color: #13A0E1;\n  margin: .6rem auto;\n}\n.mobile .sjpt-case-p {\n  font-size: .9rem;\n  color: #666;\n  margin-top: 1rem;\n}\n.mobile .sjpt-case-img {\n  width: 28.9rem;\n  height: 100%;\n  margin: 0 auto;\n  overflow: hidden;\n  margin-top: 1rem;\n  margin-bottom: 1.75rem;\n}\n.mobile .sjpt-case-img img {\n  float: left;\n  width: 13.3rem;\n  height: 3.25rem;\n  margin-top: .5rem;\n}\n.mobile .sjpt-case-img .mgr {\n  margin-right: 1.5rem;\n}\n.mobile .yb-case {\n  text-align: center;\n}\n.mobile .yb-case .page-icon {\n  margin-bottom: .75rem;\n}\n.mobile .main-bipt {\n  background: url(\"/images/bg-bipt-app.jpg\") no-repeat center top;\n  background-size: 100% 13.6rem;\n  background-color: white;\n}\n.mobile .main-bipt .main-text {\n  margin: .8rem auto;\n}\n.mobile .main-bipt .bipt-content {\n  margin-top: 2.25rem;\n}\n.mobile .bipt-list-group {\n  width: 27.5rem;\n  font-size: .9rem;\n  color: #777;\n  margin: 1.3rem auto 0 auto;\n}\n.mobile .bipt-list-group .list-left {\n  float: none;\n  overflow: hidden;\n  margin-left: 1.75rem;\n}\n.mobile .bipt-list-group .list-left img {\n  float: left;\n  width: 8.15rem;\n  height: 5.9rem;\n  vertical-align: middle;\n  margin-right: 1.25rem;\n}\n.mobile .bipt-list-group .list-left div {\n  float: left;\n  margin: 0;\n  text-align: left;\n  margin-top: 1.1rem;\n}\n.mobile .bipt-list-group .list-right {\n  float: none;\n  overflow: hidden;\n  margin-top: 1rem;\n  margin-left: 1.75rem;\n  margin-bottom: 1.75rem;\n}\n.mobile .bipt-list-group .list-right img {\n  float: left;\n  width: 8.15rem;\n  height: 5.9rem;\n  margin-right: 1.25rem;\n}\n.mobile .bipt-list-group .list-right div {\n  text-align: left;\n  float: left;\n  margin-top: .6rem;\n}\n.mobile .bipt-img {\n  width: 20.1rem;\n  height: 10.5rem;\n  margin-top: 5rem;\n  margin-bottom: 2.15rem;\n}\n.mobile .img-group {\n  margin: 0;\n}\n.mobile .img-group .img-left {\n  float: none;\n  display: block;\n  width: 18.3rem;\n  height: 10.4rem;\n  margin: .6rem  auto;\n  background: url(\"/images/bipt01-app.jpg\") no-repeat center;\n  background-size: 18.3rem 10.4rem;\n}\n.mobile .img-group p {\n  margin-top: .5rem;\n  margin-bottom: 1rem;\n  color: #888;\n  font-size: .9rem;\n}\n.mobile .bipt-case {\n  background-color: #fff;\n}\n.mobile .imgtop {\n  width: 27.9rem;\n  height: 13.95rem;\n  background: url(\"/images/bipt05-app.jpg\") no-repeat center;\n  background-size: 100%;\n  margin: 0 auto;\n}\n.mobile .imgbot {\n  width: 27.9rem;\n  height: 14rem;\n  background: url(\"/images/bipt06-app.jpg\") no-repeat center;\n  background-size: 100%;\n  margin: 1rem auto 1.5rem auto;\n}\nfooter .mobile {\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  background: #f5f5f5;\n}\nbody {\n  background-image: none;\n}\n.content-title {\n  font-size: 1.2rem;\n  color: #59BBEA;\n  text-align: center;\n  letter-spacing: 1px;\n}\n.content-title .content-text {\n  font-size: 0.5rem;\n  margin-top: 2px;\n  color: #ACAAAA;\n}\n.response-img {\n  width: 27.5rem;\n}\n.title {\n  font-size: 1.2rem;\n  color: #59BBEA;\n  text-align: center;\n  letter-spacing: 1px;\n  margin-bottom: .75rem;\n}\n.main-yyy {\n  padding-top: 3.4rem;\n  text-align: center;\n  background: url(\"/images/app-yhospital-bg.jpg\") no-repeat center top;\n  background-size: 100% 11.35rem;\n  background-color: white;\n}\n.main-yyy .ddn {\n  width: 15.2rem;\n  height: 12.15rem;\n  display: block;\n  margin: 0px auto;\n}\n.main-yyy .xdn {\n  width: 15.25rem;\n  height: 9rem;\n  display: block;\n  margin: 1.6rem auto 1.5rem auto;\n}\n.main-yyy .mgt {\n  margin-top: 2.8rem;\n}\n.main-yyy .app-text {\n  font-size: 0.9rem;\n  line-height: 1.4rem;\n  color: #8e8d8d;\n  width: 34.1rem;\n  margin: .9rem auto 1.1rem auto;\n}\n.main-yyy .app-hdl {\n  display: block;\n  width: 29.8rem;\n  height: 16.55rem;\n  margin: 0 auto 2.4rem auto;\n}\n.main-yyy .app-model {\n  width: 27.5rem;\n  margin: 0 auto 3.5rem auto;\n  display: block;\n}\nbody {\n  background-image: none;\n}\n.ddn {\n  width: 19.7rem;\n  height: 13.1rem;\n}\n.main {\n  padding-top: 3.85rem;\n  text-align: center;\n  background: url(\"/images/bg-yjk-app.jpg\") no-repeat center top;\n  background-size: 100% 13.1rem;\n  background-color: white;\n}\n.yjk-title {\n  margin-top: -1rem;\n  margin-bottom: 0;\n}\n.app-text {\n  line-height: 2.4rem;\n  color: #777;\n  margin: 0 auto .25rem;\n  font-size: .9rem;\n}\n.maintop-text {\n  width: 14rem;\n  font-size: 1.2rem;\n  text-align: right;\n  letter-spacing: .1rem;\n  margin: 2.25rem auto .75rem auto;\n}\n.maintop-text .icon {\n  display: inline-block;\n  width: 1.8rem;\n  height: 1.8rem;\n  background: url(\"/images/yjk-icon-app01.png\") no-repeat;\n  background-size: 1.8rem;\n  top: -0.55rem;\n  left: 0;\n}\n.yjk-tal {\n  width: 27.55rem;\n}\n.jiaoyu {\n  background: white;\n}\n.jiaoyu .icon {\n  background: url(\"/images/yjk-icon-app02.png\") no-repeat;\n  background-size: 1.8rem;\n}\n.jiaoyu .content-title {\n  font-size: 1rem;\n}\n.jiaoyu .content-title .content-text {\n  font-size: .7rem;\n  letter-spacing: 0;\n}\n.jiaoyu .img {\n  margin-top: 1.4rem;\n  margin-bottom: 2.25rem;\n  width: 23.7rem;\n  height: 15.95rem;\n}\n.jiaoyu .ddn-img {\n  display: block;\n  width: 24.05rem;\n  height: 19.2rem;\n  margin: 1.25rem auto 0 auto;\n}\n.jiaoyu .bot-img {\n  width: 29rem;\n  height: 12.5rem;\n  margin: .85rem auto 2.5rem auto;\n}\n.mobile {\n  text-align: center;\n}\n.mobile .main-ybgl {\n  background: url(\"/images/bg-ybgl-app.jpg\") no-repeat center top;\n  background-size: 100% 13.65rem;\n  padding-top: 5.5rem;\n  background-color: white;\n}\n.mobile .mgt {\n  margin-top: 2.25rem;\n}\n.mobile .video {\n  width: 16.4rem;\n  height: 10.1rem;\n  margin: 0 auto 1.25rem auto;\n}\n.mobile #example_video_2 {\n  width: 16.4rem !important;\n  height: 10.1rem !important;\n}\n.mobile .vjs-default-skin .vjs-big-play-button {\n  display: none;\n}\n.mobile .yb-main-text {\n  font-size: .9rem;\n  width: 27.5rem;\n  margin: .5rem auto .8rem auto;\n  color: #888;\n}\n.mobile .yb-merit {\n  width: 27.5rem;\n  margin: .9rem auto 0 auto;\n  color: #989898;\n  font-size: .9rem;\n  overflow: hidden;\n}\n.mobile .yb-merit .title-merit {\n  overflow: hidden;\n  color: #666;\n  font-size: .9rem;\n  margin-bottom: 5px;\n}\n.mobile .yb-merit .title-merit .title-lf {\n  float: left;\n  width: 12.25rem;\n  text-align: right;\n}\n.mobile .yb-merit .title-merit .title-rt {\n  float: left;\n  width: 12.25rem;\n  text-align: left;\n  margin-left: 3rem;\n}\n.mobile .yb-merit .merit-conter {\n  height: 100%;\n  font-size: .8rem;\n  display: table;\n  margin-bottom: 1rem;\n}\n.mobile .yb-merit .merit-conter:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n.mobile .yb-merit .merit-conter .lh88 {\n  line-height: 4.4rem;\n}\n.mobile .yb-merit .merit-conter .mt2 {\n  margin-top: 2px;\n}\n.mobile .yb-merit .merit-conter .mt15 {\n  margin-top: .75rem;\n}\n.mobile .yb-merit .merit-conter .mt25 {\n  margin-top: 1.25rem;\n}\n.mobile .yb-merit .merit-conter .merit-left {\n  float: none;\n  width: 12.25rem;\n  text-align: right;\n  display: table-cell;\n  vertical-align: middle;\n}\n.mobile .yb-merit .merit-conter .merit-left li {\n  margin-bottom: 3px;\n}\n.mobile .yb-merit .merit-conter .merit-center {\n  float: none;\n  width: 3rem;\n  text-align: center;\n  display: table-cell;\n  vertical-align: middle;\n}\n.mobile .yb-merit .merit-conter .merit-center:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n.mobile .yb-merit .merit-conter .merit-center li {\n  width: 3rem;\n  margin: 0px auto;\n  border-radius: 30px;\n  padding: 0px;\n  position: relative;\n}\n.mobile .yb-merit .merit-conter .merit-center li .line {\n  display: block;\n  width: 1px;\n  height: 150%;\n  background: #D2D2D2;\n  position: absolute;\n  top: 0px;\n  left: 50%;\n  z-index: 1;\n}\n.mobile .yb-merit .merit-conter .merit-center li .linetop {\n  display: block;\n  width: 1px;\n  height: 35px;\n  position: absolute;\n  top: -35px;\n  left: 50%;\n  z-index: 1;\n  background: url(\"/images/linetop.png\") no-repeat;\n}\n.mobile .yb-merit .merit-conter .merit-center li .linebot {\n  display: block;\n  width: 1px;\n  height: 35px;\n  position: absolute;\n  bottom: -1.75rem;\n  left: 50%;\n  z-index: 1;\n  background: url(\"/images/linebot.png\") no-repeat;\n}\n.mobile .yb-merit .merit-conter .merit-center li a {\n  width: 14px;\n  position: relative;\n  z-index: 2;\n  display: inline-block;\n  color: #fff;\n  border-radius: 30px;\n  background: #0396D3;\n  line-height: 15px;\n  padding: .5rem .5rem;\n}\n.mobile .yb-merit .merit-conter .merit-center li a.green {\n  background: #48C355;\n}\n.mobile .yb-merit .merit-conter .merit-center li a.yellow {\n  background: #E6B610;\n}\n.mobile .yb-merit .merit-conter .merit-center li a.orange {\n  background: #DF7436;\n}\n.mobile .yb-merit .merit-conter .merit-center li a.purple {\n  background: #B551B1;\n}\n.mobile .yb-merit .merit-conter .merit-center li a.pink {\n  background: #DE479B;\n}\n.mobile .yb-merit .merit-conter .merit-center li .c {\n  background: #17cea1;\n}\n.mobile .yb-merit .merit-conter .merit-center li .zsk {\n  padding: .9rem .5rem;\n  background: #0396D3;\n}\n.mobile .yb-merit .merit-conter .merit-right {\n  float: none;\n  width: 12.25rem;\n  height: 4.4rem;\n  text-align: left;\n  display: table-cell;\n  vertical-align: middle;\n}\n.mobile .yb-merit .merit-conter .merit-right li {\n  margin-bottom: 3px;\n}\n.mobile .yb-merit .merit-conter .last {\n  margin-bottom: 0;\n}\n.mobile .yb-action {\n  margin-top: 4rem;\n  padding-bottom: .25rem;\n  width: 100%;\n  background: #F1F1F1;\n  padding-top: 28px;\n  color: #45AEDB;\n}\n.mobile .yb-action .center {\n  width: 100%;\n  padding: 0;\n}\n.mobile .yb-action .center .action-conter {\n  margin-bottom: 2.25rem;\n  margin-top: 1.25rem;\n}\n.mobile .yb-action .center .action-conter .yb-action-img {\n  width: 35.3rem;\n  height: 18.15rem;\n}\n.mobile .yb-action .center .action-btm {\n  width: 34.1rem;\n  margin: 0 auto;\n  overflow: hidden;\n}\n.mobile .yb-action .center .action-btm dl {\n  float: left;\n  width: 33%;\n}\n.mobile .yb-action .center .action-btm dl dt {\n  font-size: .9rem;\n  width: 2.75rem;\n  height: 2.75rem;\n  line-height: 2.75rem;\n  margin: 0;\n  border-radius: 50%;\n  border: 2px solid #0396D3;\n  color: #45AEDB;\n}\n.mobile .yb-action .center .action-btm dl dd {\n  margin-top: .6rem;\n  font-size: .7rem;\n  text-align: left;\n}\n.mobile .yb-action .center .action-btm .dl-mg {\n  margin: 0;\n}\n.mobile .yb-action .center .action-btm .dl-mg dt {\n  margin: 0 auto;\n}\n.mobile .yb-action .center .action-btm .dl-mg dd {\n  text-align: center;\n}\n.mobile .yb-action .center .action-btm .dl-btm {\n  text-align: right;\n}\n.mobile .yb-action .center .action-btm .dl-btm dt {\n  text-align: center;\n  display: inline-block;\n}\n.mobile .yb-action .center .action-btm .dl-btm dd {\n  text-align: right;\n}\n.mobile .yb-case {\n  position: relative;\n  overflow: hidden;\n}\n.mobile .yb-case .center {\n  width: 34.1rem;\n  margin: 0 auto;\n  position: relative;\n}\n.mobile .yb-case .center .app-left {\n  float: left;\n  width: 8.2rem;\n  height: 16.4rem;\n  margin-left: 2.4rem;\n  margin-right: .2rem;\n}\n.mobile .yb-case .center .app-right {\n  float: left;\n  width: 20.4rem;\n  height: 16.4rem;\n}\n.mobile .yb-case .center .app-ul {\n  margin-left: 3.25rem;\n  text-align: left;\n  font-size: .9rem;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  color: #59BBEA;\n}\n.mobile .yb-case .center .app-ul li {\n  overflow: hidden;\n}\n.mobile .yb-case .center .app-ul li i {\n  float: left;\n  width: .5rem;\n  height: .5rem;\n  background-color: #59BBEA;\n  margin-right: .2rem;\n  margin-top: .4rem;\n}\n.mobile .yb-case .center .app-ul li p {\n  float: left;\n}\n.mobile .case-box {\n  overflow: hidden;\n  margin-top: .9rem;\n}\n.mobile .case-wx {\n  position: absolute;\n  bottom: 0;\n  right: 10rem;\n  width: 4.95rem;\n  height: 4.95rem;\n}\n.hpms-yyd {\n  margin-bottom: 1rem;\n}\n.mobile .main-yyd {\n  padding-top: 16.8rem;\n  background: url(\"/images/bg-yyd-app.jpg\") no-repeat center top;\n  background-size: 100% 15.6rem;\n  background-color: white;\n}\n.mobile .main-yyd .title {\n  margin-bottom: .75rem;\n}\n.mobile .main-yyd .main-text {\n  margin-bottom: .85rem;\n}\n.mobile .sysm-yyd {\n  margin-top: .9rem;\n  margin-bottom: 2.4rem;\n}\n.mobile .status {\n  width: 37.5rem;\n  height: 17rem;\n  margin-top: 1.25rem;\n}\n.mobile .model {\n  margin-bottom: 2.65rem;\n}\n.mobile .model img {\n  width: 31.6rem;\n  height: 17.2rem;\n  display: block;\n  margin: 1.25rem auto 0 auto;\n}\n.rczp .main {\n  background: url(\"/images/bg-rczp-app.jpg\") no-repeat;\n  background-size: 100% 15.65rem;\n  padding-top: 16.4rem;\n}\n.rczp .web {\n  display: inline-block;\n  background: #036EB7;\n  font-size: .9rem;\n  padding: .5rem .55rem;\n  color: #fff;\n  margin-top: 2.5rem;\n}\n.rczp .message {\n  min-height: 300px;\n  margin-top: 1rem;\n}\n.gywm .main {\n  background: url(\"/images/bg-gywm-app.jpg\") no-repeat;\n  background-size: 100% 15.65rem;\n  padding-top: 16.4rem;\n}\n.gywm .mn-logo {\n  width: 4.9rem;\n  margin: 1.75rem 0 .5rem 0;\n}\n.gywm .gywm-p {\n  color: #777;\n  font-size: .9rem;\n  line-height: 1.5rem;\n  margin-bottom: 1.25rem;\n}\n.gywm .gywm-img {\n  width: 31rem;\n  margin: 0 auto;\n}\n.gywm .gywm-img img {\n  width: 13.75rem;\n}\n.gywm .gywm-img .mr {\n  margin-right: 1.5rem;\n}\n.gywm .gywm-mianbot {\n  width: 34.15rem;\n  margin: 3.25rem auto 2.25rem auto;\n}\n.error .rest {\n  width: 37.5rem;\n  margin: 5.25rem auto 0 auto;\n  height: 20rem;\n  background-color: white;\n}\n.error .rest .img {\n  float: left;\n  width: 19.05rem;\n  height: 18.65rem;\n  margin-left: 3.8rem;\n  background: url(\"/images/index-404-app.jpg\") no-repeat;\n  background-size: 100%;\n}\n.error .rest .text {\n  float: left;\n  margin-left: -1rem;\n  margin-top: 7.9rem;\n  text-align: left;\n  font-size: 1rem;\n  color: #888;\n}\n.error .rest .text span {\n  display: block;\n  font-size: 1.5rem;\n  margin-bottom: 5px;\n  color: #666;\n  line-height: 2rem;\n}\n.error .rest .text a {\n  padding-bottom: 1px;\n  color: #89CCF8;\n  border-bottom-color: #89CCF8;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n}\n.continued {\n  background: white;\n}\n.continued .continued-conter {\n  width: 37.5rem;\n  margin: 0px auto;\n  padding-top: 3rem;\n  height: 25rem;\n  background-color: white;\n  text-align: center;\n  background: url(\"/images/bg-continue-app.jpg\") no-repeat center bottom;\n  background-size: 35.35rem 19.2rem;\n}\n.continued .continued-conter .text {\n  padding-top: 4.25rem;\n  text-align: center;\n  font-size: 1rem;\n  color: #888;\n}\n.continued .continued-conter .text span {\n  display: block;\n  font-size: 1.5rem;\n  margin-bottom: 5px;\n  color: #777;\n  line-height: 2rem;\n}\n.continued .continued-conter .text a {\n  padding-bottom: 1px;\n  color: #89CCF8;\n  border-bottom-color: #89CCF8;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n}\n", ""]);
 
 	// exports
 
@@ -27102,32 +27122,72 @@
 /* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(240);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../../../node_modules/css-loader/index.js!./all.css", function() {
+				var newContent = require("!!./../../../../../../node_modules/css-loader/index.js!./all.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(237)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "body{\n  margin: 0;\n  padding: 0;\n  font-size: 20px;\n}\nhtml,body{\n  width: 100%;\n  font-size: 20px;\n}\n.main-body{\n  font-size: 1.4rem;\n  padding: 0 10px 0 0;\n  position: relative;\n}\nheader{\n  display: flex;\n  position: fixed;\n  top: 0;\n  z-index: 2;\n  width: 100%;\n  background-color: #07a2e9;\n  align-items: center;\n}\n.header-left{\n  align-items: center;\n  padding: 0 .7rem;\n}\n.header-right{\n  flex: 1;\n  display: flex;\n  align-items: center;\n}\n.header-title{\n  display: block;\n  position: absolute;\n  left: 0;\n  top: 0;\n  line-height: 4.2rem;\n  text-align: center;\n  color: #fff;\n  width: 100%;\n  z-index: -1;\n  font-weight: 500;\n  font-size: 1.68rem;\n}\n.header-left .fa-2x{\n  vertical-align: -13%;\n}\n.header-right form{\n  display: flex;\n}\n.header-right input{\n  flex:1;\n  font-size: 1.05rem;\n  border-radius: 0.42rem;\n  border:1px solid #d9d9d9;\n  padding: .7rem;\n}\n.main{\n\n}\n.main-block{\n  padding-top: 3.64rem;\n}\n.main-header{\n  font-weight: bold;\n}\n.main-block dl{\n  display: flex;\n  margin: 0;\n  align-items: center;\n  border-bottom:1px solid #e1e1e1;\n  line-height: 3;\n  text-align: center;\n}\n.main-block dt{\n  width: 10%;\n  font-size: 1.05rem;\n}\n.main-block dd{\n  margin: 0;\n  line-height: 1.5;\n  flex: 1;\n  padding: 1.4rem 0;\n  text-align: left;\n  border-left:1px solid #fff;\n  font-size: 1.54rem;\n  color: #666;\n}\n.main-header{\n  background-color: #d9d9d9;\n}\n.header-left button{\n  border-width: 0;\n  border-radius: 3px;\n  font-size: 1.68rem;\n  color: #fff;\n  background-color: inherit;\n  padding:.28rem;\n}\n.header-right button{\n  border-width: 0;\n  color: #fff;\n  padding: 0 .525rem;\n  background-color: inherit;\n  height: 100%;\n  font-size: 1.68rem;\n  display: block;\n}\n.example-enter{\n  opacity: 0.01;\n}\n.example-enter.example-enter-active{\n  opacity: 1;\n  transition: opacity 500ms ease-in;\n}\n.example-leave{\n  opacity: 1;\n}\n.example-leave.example-leave-active{\n  opacity: 0.01;\n}\n.uk-list{\n  font-size: 1.54rem;\n  margin-bottom: 0;\n}\n.uk-list li{\n  line-height: 2;\n}\n.uk-list a{\n  color: #666;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 241 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
 	exports.__esModule = true;
 	exports.compose = exports.applyMiddleware = exports.bindActionCreators = exports.combineReducers = exports.createStore = undefined;
 
-	var _createStore = __webpack_require__(240);
+	var _createStore = __webpack_require__(242);
 
 	var _createStore2 = _interopRequireDefault(_createStore);
 
-	var _combineReducers = __webpack_require__(247);
+	var _combineReducers = __webpack_require__(249);
 
 	var _combineReducers2 = _interopRequireDefault(_combineReducers);
 
-	var _bindActionCreators = __webpack_require__(249);
+	var _bindActionCreators = __webpack_require__(251);
 
 	var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
 
-	var _applyMiddleware = __webpack_require__(250);
+	var _applyMiddleware = __webpack_require__(252);
 
 	var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
 
-	var _compose = __webpack_require__(251);
+	var _compose = __webpack_require__(253);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
-	var _warning = __webpack_require__(248);
+	var _warning = __webpack_require__(250);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -27151,7 +27211,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 240 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27160,11 +27220,11 @@
 	exports.ActionTypes = undefined;
 	exports["default"] = createStore;
 
-	var _isPlainObject = __webpack_require__(241);
+	var _isPlainObject = __webpack_require__(243);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _symbolObservable = __webpack_require__(245);
+	var _symbolObservable = __webpack_require__(247);
 
 	var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
 
@@ -27418,12 +27478,12 @@
 	}
 
 /***/ },
-/* 241 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(242),
-	    isHostObject = __webpack_require__(243),
-	    isObjectLike = __webpack_require__(244);
+	var getPrototype = __webpack_require__(244),
+	    isHostObject = __webpack_require__(245),
+	    isObjectLike = __webpack_require__(246);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -27494,7 +27554,7 @@
 
 
 /***/ },
-/* 242 */
+/* 244 */
 /***/ function(module, exports) {
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
@@ -27515,7 +27575,7 @@
 
 
 /***/ },
-/* 243 */
+/* 245 */
 /***/ function(module, exports) {
 
 	/**
@@ -27541,7 +27601,7 @@
 
 
 /***/ },
-/* 244 */
+/* 246 */
 /***/ function(module, exports) {
 
 	/**
@@ -27576,18 +27636,18 @@
 
 
 /***/ },
-/* 245 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/* global window */
 	'use strict';
 
-	module.exports = __webpack_require__(246)(global || window || this);
+	module.exports = __webpack_require__(248)(global || window || this);
 
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 246 */
+/* 248 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27612,7 +27672,7 @@
 
 
 /***/ },
-/* 247 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -27620,13 +27680,13 @@
 	exports.__esModule = true;
 	exports["default"] = combineReducers;
 
-	var _createStore = __webpack_require__(240);
+	var _createStore = __webpack_require__(242);
 
-	var _isPlainObject = __webpack_require__(241);
+	var _isPlainObject = __webpack_require__(243);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _warning = __webpack_require__(248);
+	var _warning = __webpack_require__(250);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -27745,7 +27805,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 248 */
+/* 250 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27775,7 +27835,7 @@
 	}
 
 /***/ },
-/* 249 */
+/* 251 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27831,7 +27891,7 @@
 	}
 
 /***/ },
-/* 250 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27842,7 +27902,7 @@
 
 	exports["default"] = applyMiddleware;
 
-	var _compose = __webpack_require__(251);
+	var _compose = __webpack_require__(253);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
@@ -27894,7 +27954,7 @@
 	}
 
 /***/ },
-/* 251 */
+/* 253 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -27939,7 +27999,7 @@
 	}
 
 /***/ },
-/* 252 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27947,11 +28007,11 @@
 	exports.__esModule = true;
 	exports.connect = exports.Provider = undefined;
 
-	var _Provider = __webpack_require__(253);
+	var _Provider = __webpack_require__(255);
 
 	var _Provider2 = _interopRequireDefault(_Provider);
 
-	var _connect = __webpack_require__(256);
+	var _connect = __webpack_require__(258);
 
 	var _connect2 = _interopRequireDefault(_connect);
 
@@ -27961,7 +28021,7 @@
 	exports.connect = _connect2["default"];
 
 /***/ },
-/* 253 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -27971,11 +28031,11 @@
 
 	var _react = __webpack_require__(1);
 
-	var _storeShape = __webpack_require__(254);
+	var _storeShape = __webpack_require__(256);
 
 	var _storeShape2 = _interopRequireDefault(_storeShape);
 
-	var _warning = __webpack_require__(255);
+	var _warning = __webpack_require__(257);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -28045,7 +28105,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 254 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28061,7 +28121,7 @@
 	});
 
 /***/ },
-/* 255 */
+/* 257 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28090,7 +28150,7 @@
 	}
 
 /***/ },
-/* 256 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -28102,31 +28162,31 @@
 
 	var _react = __webpack_require__(1);
 
-	var _storeShape = __webpack_require__(254);
+	var _storeShape = __webpack_require__(256);
 
 	var _storeShape2 = _interopRequireDefault(_storeShape);
 
-	var _shallowEqual = __webpack_require__(257);
+	var _shallowEqual = __webpack_require__(259);
 
 	var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
-	var _wrapActionCreators = __webpack_require__(258);
+	var _wrapActionCreators = __webpack_require__(260);
 
 	var _wrapActionCreators2 = _interopRequireDefault(_wrapActionCreators);
 
-	var _warning = __webpack_require__(255);
+	var _warning = __webpack_require__(257);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _isPlainObject = __webpack_require__(259);
+	var _isPlainObject = __webpack_require__(261);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _hoistNonReactStatics = __webpack_require__(263);
+	var _hoistNonReactStatics = __webpack_require__(265);
 
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-	var _invariant = __webpack_require__(264);
+	var _invariant = __webpack_require__(266);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -28489,7 +28549,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 257 */
+/* 259 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -28520,7 +28580,7 @@
 	}
 
 /***/ },
-/* 258 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28528,7 +28588,7 @@
 	exports.__esModule = true;
 	exports["default"] = wrapActionCreators;
 
-	var _redux = __webpack_require__(239);
+	var _redux = __webpack_require__(241);
 
 	function wrapActionCreators(actionCreators) {
 	  return function (dispatch) {
@@ -28537,12 +28597,12 @@
 	}
 
 /***/ },
-/* 259 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(260),
-	    isHostObject = __webpack_require__(261),
-	    isObjectLike = __webpack_require__(262);
+	var getPrototype = __webpack_require__(262),
+	    isHostObject = __webpack_require__(263),
+	    isObjectLike = __webpack_require__(264);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -28613,7 +28673,7 @@
 
 
 /***/ },
-/* 260 */
+/* 262 */
 /***/ function(module, exports) {
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
@@ -28634,7 +28694,7 @@
 
 
 /***/ },
-/* 261 */
+/* 263 */
 /***/ function(module, exports) {
 
 	/**
@@ -28660,7 +28720,7 @@
 
 
 /***/ },
-/* 262 */
+/* 264 */
 /***/ function(module, exports) {
 
 	/**
@@ -28695,7 +28755,7 @@
 
 
 /***/ },
-/* 263 */
+/* 265 */
 /***/ function(module, exports) {
 
 	/**
@@ -28751,7 +28811,7 @@
 
 
 /***/ },
-/* 264 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -28809,7 +28869,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 265 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28818,11 +28878,11 @@
 		value: true
 	});
 
-	var _redux = __webpack_require__(239);
+	var _redux = __webpack_require__(241);
 
 	var defaultState = {
 		isLoading: false,
-		height: '3rem'
+		height: '4.2rem'
 	};
 
 	function index() {
@@ -28911,7 +28971,7 @@
 	exports.default = zskApp;
 
 /***/ },
-/* 266 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28924,19 +28984,19 @@
 
 	var _react = __webpack_require__(1);
 
-	var _header = __webpack_require__(267);
+	var _header = __webpack_require__(269);
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _main = __webpack_require__(268);
+	var _main = __webpack_require__(270);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _nav = __webpack_require__(271);
+	var _nav = __webpack_require__(273);
 
 	var _nav2 = _interopRequireDefault(_nav);
 
-	var _reactRedux = __webpack_require__(252);
+	var _reactRedux = __webpack_require__(254);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28994,7 +29054,7 @@
 	exports.default = (0, _reactRedux.connect)(select)(Index);
 
 /***/ },
-/* 267 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29009,7 +29069,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRedux = __webpack_require__(252);
+	var _reactRedux = __webpack_require__(254);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29135,7 +29195,7 @@
 	exports.default = (0, _reactRedux.connect)(select)(Header);
 
 /***/ },
-/* 268 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29150,9 +29210,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRedux = __webpack_require__(252);
+	var _reactRedux = __webpack_require__(254);
 
-	var _loading = __webpack_require__(269);
+	var _loading = __webpack_require__(271);
 
 	var _loading2 = _interopRequireDefault(_loading);
 
@@ -29166,7 +29226,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var InfiniteScroll = __webpack_require__(270)(_react2.default);
+	var InfiniteScroll = __webpack_require__(272)(_react2.default);
 
 	var Main = function (_Component) {
 	  _inherits(Main, _Component);
@@ -29182,7 +29242,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'main' },
+	        null,
 	        _react2.default.createElement(Mainblock, { dispatch: this.props.dispatch, queryStr: this.props.queryStr, data: this.props.data, pageNo: this.props.pageNo, isLoading: this.props.isLoading, top: this.props.top })
 	      );
 	    }
@@ -29200,33 +29260,38 @@
 	    var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(Mainblock).call(this, props));
 
 	    _this2.handleLoad = _this2.handleLoad.bind(_this2);
+	    _this2.scrollHander = _this2.scrollHander.bind(_this2);
 	    return _this2;
 	  }
 
 	  _createClass(Mainblock, [{
+	    key: 'scrollHander',
+	    value: function scrollHander() {
+	      var desUnder = 0;
+	      desUnder = $(this.refs.main).outerHeight() - $(window).scrollTop() - $(window).height();
+	      if (desUnder <= 0 && this.props.isLoading == false) {
+	        this.handleLoad();
+	      }
+	    }
+	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      var _this3 = this;
-
 	      this.handleLoad();
-	      var desUnder = 0;
-	      window.addEventListener('scroll', function () {
-	        desUnder = $(_this3.refs.main).outerHeight() - $(window).scrollTop() - $(window).height();
-	        if (desUnder <= 0) {
-	          if (_this3.props.isLoading) return false;
-	          _this3.props.dispatch({
-	            type: 'SHOWLOADING'
-	          });
-	          setTimeout(function () {
-	            _this3.handleLoad();
-	          }, 0);
-	        }
-	      }, false);
+
+	      window.addEventListener('scroll', this.scrollHander, false);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      window.removeEventListener('scroll', this.scrollHander, false);
 	    }
 	  }, {
 	    key: 'handleLoad',
 	    value: function handleLoad() {
 	      var _self = this;
+	      this.props.dispatch({
+	        type: 'SHOWLOADING'
+	      });
 	      $.ajax({
 	        url: 'http://192.168.1.235:8082/imkb/immoapp/searchApp',
 	        data: {
@@ -29307,7 +29372,7 @@
 	exports.default = (0, _reactRedux.connect)(select)(Main);
 
 /***/ },
-/* 269 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29352,7 +29417,7 @@
 	exports.default = Loading;
 
 /***/ },
-/* 270 */
+/* 272 */
 /***/ function(module, exports) {
 
 	function topPosition(domElt) {
@@ -29420,7 +29485,7 @@
 	};
 
 /***/ },
-/* 271 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29435,7 +29500,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRedux = __webpack_require__(252);
+	var _reactRedux = __webpack_require__(254);
+
+	var _reactRouter = __webpack_require__(172);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29470,17 +29537,17 @@
 	            'li',
 	            null,
 	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
-	              '云处方医院点评'
+	              _reactRouter.Link,
+	              { to: 'intro/bi/决策支持BI平台' },
+	              '决策支持BI平台'
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'li',
 	            null,
 	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
+	              _reactRouter.Link,
+	              { to: '' },
 	              '云药店'
 	            )
 	          ),
@@ -29488,8 +29555,8 @@
 	            'li',
 	            null,
 	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
+	              _reactRouter.Link,
+	              { to: '' },
 	              '云健康'
 	            )
 	          ),
@@ -29497,8 +29564,8 @@
 	            'li',
 	            null,
 	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
+	              _reactRouter.Link,
+	              { to: 'intro/hpms/医院药事管理软件' },
 	              '医院药事管理软件'
 	            )
 	          ),
@@ -29506,8 +29573,8 @@
 	            'li',
 	            null,
 	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
+	              _reactRouter.Link,
+	              { to: 'intro/hmms/医院医保管理软件' },
 	              '医院医保管理软件'
 	            )
 	          )
@@ -29534,7 +29601,7 @@
 	exports.default = (0, _reactRedux.connect)(select)(Nav);
 
 /***/ },
-/* 272 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29549,17 +29616,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRedux = __webpack_require__(252);
+	var _reactRedux = __webpack_require__(254);
 
-	var _loading = __webpack_require__(269);
+	var _loading = __webpack_require__(271);
 
 	var _loading2 = _interopRequireDefault(_loading);
 
-	var _titleBar = __webpack_require__(273);
+	var _titleBar = __webpack_require__(275);
 
 	var _titleBar2 = _interopRequireDefault(_titleBar);
 
-	var _PageMain = __webpack_require__(274);
+	var _PageMain = __webpack_require__(276);
 
 	var _PageMain2 = _interopRequireDefault(_PageMain);
 
@@ -29626,7 +29693,7 @@
 	exports.default = (0, _reactRedux.connect)(select)(Page);
 
 /***/ },
-/* 273 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29695,7 +29762,7 @@
 	exports.default = (0, _reactRouter.withRouter)(TitleBar);
 
 /***/ },
-/* 274 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29736,15 +29803,15 @@
 						{ key: ele.title },
 						_react2.default.createElement(
 							'h2',
-							{ style: { fontSize: '1.2rem' } },
+							{ style: { fontSize: '1.68rem', marginTop: '2rem' } },
 							ele.title
 						),
-						_react2.default.createElement('p', { style: { fontSize: '1.2rem' }, dangerouslySetInnerHTML: { __html: ele.content } })
+						_react2.default.createElement('p', { style: { fontSize: '1.68rem' }, dangerouslySetInnerHTML: { __html: ele.content } })
 					);
 				});
 				return _react2.default.createElement(
 					'div',
-					{ style: { paddingTop: this.props.height, paddingLeft: '1rem', paddingRight: '1rem' } },
+					{ style: { textAlign: 'left', paddingTop: this.props.height, lineHeight: 2, paddingLeft: '1.4rem', paddingRight: '1.4rem' } },
 					mainList
 				);
 			}
@@ -29754,6 +29821,1231 @@
 	}(_react.Component);
 
 	exports.default = PageMain;
+
+/***/ },
+/* 277 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _titleBar = __webpack_require__(275);
+
+	var _titleBar2 = _interopRequireDefault(_titleBar);
+
+	var _footer = __webpack_require__(278);
+
+	var _footer2 = _interopRequireDefault(_footer);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Hpms = function (_Component) {
+		_inherits(Hpms, _Component);
+
+		function Hpms() {
+			_classCallCheck(this, Hpms);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Hpms).apply(this, arguments));
+		}
+
+		_createClass(Hpms, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'ysgl' },
+					_react2.default.createElement(_titleBar2.default, { title: this.props.params.title }),
+					_react2.default.createElement(Main, null),
+					_react2.default.createElement(_footer2.default, null)
+				);
+			}
+		}]);
+
+		return Hpms;
+	}(_react.Component);
+
+	exports.default = Hpms;
+
+	var Main = function (_Component2) {
+		_inherits(Main, _Component2);
+
+		function Main() {
+			_classCallCheck(this, Main);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Main).apply(this, arguments));
+		}
+
+		_createClass(Main, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'mobile' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'main-ysgl' },
+						_react2.default.createElement('img', { src: '/images/computer-img01-app.png', alt: '', className: 'ddn-ysgl' }),
+						_react2.default.createElement('img', { src: 'images/computer-img02-app.png', alt: '', className: 'xdn-ysgl' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'main-logo' },
+							'医院药事管理软件'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'app-hpms' },
+							'HPMS'
+						),
+						_react2.default.createElement(
+							'p',
+							{ className: 'main-text  mgtSixteen' },
+							'医院药事管理软件主要是利用应用自然语言定义的图形化',
+							_react2.default.createElement('br', null),
+							'规则技术基于庞大的临床用药标准知识库、结合现行医疗法规',
+							_react2.default.createElement('br', null),
+							'为医院提供一套智能化的药事管理软件'
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: 'javascript:void(0)', className: 'sysm sysm-ysgl' },
+							_react2.default.createElement('i', { className: 'icon-sysm' }),
+							'产品手册'
+						),
+						_react2.default.createElement(
+							'p',
+							{ className: 'title' },
+							'价值在哪里?'
+						),
+						_react2.default.createElement('img', { src: 'images/box-app.jpg', alt: '', className: 'box-app' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'action' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'content-title' },
+								'功能模块',
+								_react2.default.createElement(
+									'p',
+									{ className: 'content-text' },
+									'FUNCTIONAL MODULE'
+								)
+							),
+							_react2.default.createElement('img', { src: 'images/ysgl-action-app.jpg', alt: '', className: 'action-app' })
+						)
+					),
+					_react2.default.createElement(
+						'ul',
+						{ className: 'page-icon' },
+						_react2.default.createElement('li', { className: 'lione' }),
+						_react2.default.createElement('li', { className: 'litwo' }),
+						_react2.default.createElement(
+							'li',
+							{ className: 'lithree' },
+							_react2.default.createElement('img', { src: '../dist/images/smionic.png', alt: '' })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'core' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'content-title' },
+							'核心优势',
+							_react2.default.createElement(
+								'p',
+								{ className: 'content-text' },
+								'CORE STRENGTHS'
+							)
+						),
+						_react2.default.createElement(
+							'ul',
+							null,
+							_react2.default.createElement(
+								'li',
+								{ className: 'first' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'num' },
+									'1'
+								),
+								'采用思维导图技术，逻辑描述和智能引擎的分离方式'
+							),
+							_react2.default.createElement(
+								'li',
+								null,
+								_react2.default.createElement(
+									'div',
+									{ className: 'num' },
+									'2'
+								),
+								'完全模拟临床实际管理逻辑判断，业务管理人员通过可视化的图形设计完成管理规则的设计'
+							)
+						),
+						_react2.default.createElement('img', { src: 'images/phone-app.jpg', alt: '', className: 'phone-app' })
+					),
+					_react2.default.createElement(
+						'ul',
+						{ className: 'page-icon' },
+						_react2.default.createElement('li', { className: 'lione' }),
+						_react2.default.createElement('li', { className: 'litwo' }),
+						_react2.default.createElement(
+							'li',
+							{ className: 'lithree' },
+							_react2.default.createElement('img', { src: '../dist/images/smionic.png', alt: '' })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'case' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'center' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'content-title' },
+								'典型案例',
+								_react2.default.createElement(
+									'p',
+									{ className: 'content-text' },
+									'APPLICATION CASE'
+								)
+							),
+							_react2.default.createElement(
+								'p',
+								{ className: 'case-p' },
+								'目前医院药事管理软件已在 ',
+								_react2.default.createElement(
+									'span',
+									null,
+									'86'
+								),
+								'家不同级别医院使用并在',
+								_react2.default.createElement('br', null),
+								'区域化项目“三明市药械合理使用管理平台”“姑苏区药事监管平台”得到推广与应用'
+							),
+							_react2.default.createElement('img', { src: 'images/doctor-app.jpg', alt: '', className: 'doctor' })
+						)
+					)
+				);
+			}
+		}]);
+
+		return Main;
+	}(_react.Component);
+
+/***/ },
+/* 278 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Footer = function (_Component) {
+		_inherits(Footer, _Component);
+
+		function Footer() {
+			_classCallCheck(this, Footer);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Footer).apply(this, arguments));
+		}
+
+		_createClass(Footer, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"footer",
+					null,
+					_react2.default.createElement(
+						"div",
+						{ className: "mobile" },
+						_react2.default.createElement(
+							"div",
+							{ className: "app-copyright " },
+							_react2.default.createElement(
+								"i",
+								null,
+								"Copyright © 2015 - 2016 IMMO All Rights Reserved 粤ICP备15113336号 "
+							),
+							_react2.default.createElement("br", null)
+						)
+					)
+				);
+			}
+		}]);
+
+		return Footer;
+	}(_react.Component);
+
+	exports.default = Footer;
+
+/***/ },
+/* 279 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _titleBar = __webpack_require__(275);
+
+	var _titleBar2 = _interopRequireDefault(_titleBar);
+
+	var _footer = __webpack_require__(278);
+
+	var _footer2 = _interopRequireDefault(_footer);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Bi = function (_Component) {
+		_inherits(Bi, _Component);
+
+		function Bi() {
+			_classCallCheck(this, Bi);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Bi).apply(this, arguments));
+		}
+
+		_createClass(Bi, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'bipt' },
+					_react2.default.createElement(_titleBar2.default, { title: this.props.params.title }),
+					_react2.default.createElement(Main, null),
+					_react2.default.createElement(_footer2.default, null)
+				);
+			}
+		}]);
+
+		return Bi;
+	}(_react.Component);
+
+	exports.default = Bi;
+
+	var Main = function (_Component2) {
+		_inherits(Main, _Component2);
+
+		function Main() {
+			_classCallCheck(this, Main);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Main).apply(this, arguments));
+		}
+
+		_createClass(Main, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'mobile' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'main-bipt' },
+						_react2.default.createElement('img', { src: 'images/bipt-app.png', alt: '', className: 'bipt-img' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'main-logo' },
+							'定制化BI分析平台'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'app-hpms' },
+							'HPMS'
+						),
+						_react2.default.createElement(
+							'p',
+							{ className: 'main-text' },
+							'通过建立标准编码体系，将产品各种特征信息按',
+							_react2.default.createElement('br', null),
+							'一定顺序和规律进行整合实现统计分析、云计算等应用，涵盖',
+							_react2.default.createElement('br', null),
+							'了企业和政府相关部门的需求信息是目前国内医药产品信息最全',
+							_react2.default.createElement('br', null),
+							'最细致的编码系统'
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: 'javascript:void(0)', className: 'sysm' },
+							_react2.default.createElement('i', { className: 'icon-sysm' }),
+							'产品手册'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'bipt-content' },
+							_react2.default.createElement(
+								'ul',
+								{ className: 'page-icon' },
+								_react2.default.createElement('li', { className: 'lione' }),
+								_react2.default.createElement('li', { className: 'litwo' }),
+								_react2.default.createElement(
+									'li',
+									{ className: 'lithree' },
+									_react2.default.createElement('img', { src: 'images/smionic.png', alt: '' })
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'content-title' },
+								'定制化BI分析平台',
+								_react2.default.createElement(
+									'div',
+									{ className: 'content-text' },
+									'USTOMIZED BI ANALYSIS PLATFORM'
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'img-group' },
+								_react2.default.createElement('span', { className: 'img-left' }),
+								_react2.default.createElement('img', { src: 'images/bipt02-app.jpg', alt: '' }),
+								_react2.default.createElement(
+									'p',
+									null,
+									'BI对客户关注的各类信息进行整合、对比、抽象',
+									_react2.default.createElement('br', null),
+									'分析面向决策层直观、简洁展现，从而实现支持决策的目的'
+								),
+								_react2.default.createElement('img', { src: 'images/bipt03-app.jpg', alt: '' }),
+								_react2.default.createElement(
+									'p',
+									null,
+									'根据政府、医院、企业的监管或管理需求，灵活定制监管',
+									_react2.default.createElement('br', null),
+									'分析决策平台'
+								)
+							),
+							_react2.default.createElement(
+								'ul',
+								{ className: 'page-icon' },
+								_react2.default.createElement('li', { className: 'lione' }),
+								_react2.default.createElement('li', { className: 'litwo' }),
+								_react2.default.createElement(
+									'li',
+									{ className: 'lithree' },
+									_react2.default.createElement('img', { src: 'images/smionic.png', alt: '' })
+								)
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'bipt-case' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'content-title' },
+								'典型案例',
+								_react2.default.createElement(
+									'div',
+									{ className: 'content-text' },
+									'APPLICATION CASE'
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'bipt-list-group' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'list-left' },
+									_react2.default.createElement('img', { src: 'images/bipt04-app.jpg', alt: '' }),
+									_react2.default.createElement(
+										'div',
+										null,
+										'标点信息委托医睦科技改造米内网',
+										_react2.default.createElement('br', null),
+										'高级会员格局库用户体验和展现形',
+										_react2.default.createElement('br', null),
+										'式得到进一步提升'
+									)
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'list-right' },
+									_react2.default.createElement('img', { src: 'images/bipt-ys-app.jpg', alt: '' }),
+									_react2.default.createElement(
+										'div',
+										null,
+										'依据医睦科技现有数据资源开发代',
+										_react2.default.createElement('br', null),
+										'理商药品筛选平台图表结合，层层',
+										_react2.default.createElement('br', null),
+										'下转，帮助客户准确把握行业发展',
+										_react2.default.createElement('br', null),
+										'趋势洞悉行业竞争格局'
+									)
+								)
+							),
+							_react2.default.createElement('div', { className: 'imgtop' }),
+							_react2.default.createElement('div', { className: 'imgbot' })
+						)
+					)
+				);
+			}
+		}]);
+
+		return Main;
+	}(_react.Component);
+
+/***/ },
+/* 280 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _titleBar = __webpack_require__(275);
+
+	var _titleBar2 = _interopRequireDefault(_titleBar);
+
+	var _footer = __webpack_require__(278);
+
+	var _footer2 = _interopRequireDefault(_footer);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Hmms = function (_Component) {
+		_inherits(Hmms, _Component);
+
+		function Hmms() {
+			_classCallCheck(this, Hmms);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Hmms).apply(this, arguments));
+		}
+
+		_createClass(Hmms, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'ybgl' },
+					_react2.default.createElement(_titleBar2.default, { title: this.props.params.title }),
+					_react2.default.createElement(Main, null),
+					_react2.default.createElement(_footer2.default, null)
+				);
+			}
+		}]);
+
+		return Hmms;
+	}(_react.Component);
+
+	exports.default = Hmms;
+
+	var Main = function (_Component2) {
+		_inherits(Main, _Component2);
+
+		function Main() {
+			_classCallCheck(this, Main);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Main).apply(this, arguments));
+		}
+
+		_createClass(Main, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'mobile' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'main-ybgl' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'video', style: { overflow: "hidden" } },
+							_react2.default.createElement(
+								'video',
+								{ id: 'example_video_2', className: 'video-js vjs-default-skin', controls: true, preload: 'none',
+									poster: 'images/ybgl-video.png',
+									'data-setup': '{}' },
+								_react2.default.createElement('source', { src: '../oceans-clip.mp4', type: 'video/mp4' })
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'main-logo' },
+							'医院医保管理软件'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'app-hpms' },
+							'HMMS'
+						),
+						_react2.default.createElement(
+							'p',
+							{ className: 'yb-main-text' },
+							'医院医保管理软件是基于',
+							_react2.default.createElement('br', null),
+							'医保三大目录、结算办法和自主研发的规则',
+							_react2.default.createElement('br', null),
+							'引擎构建的智能化管理平台软件帮助医院优化医保管理流程规',
+							_react2.default.createElement('br', null),
+							'范医保诊疗行为提高医保基金使用效率，并可及时应对医保政策',
+							_react2.default.createElement('br', null),
+							'未来变化'
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: 'javascript:void(0)', className: 'sysm' },
+							_react2.default.createElement('i', { className: 'icon-sysm' }),
+							'产品手册'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'content-title mgt' },
+							'价值对比',
+							_react2.default.createElement(
+								'div',
+								{ className: 'content-text' },
+								'VALUE CONTRAST'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'yb-merit' },
+							_react2.default.createElement(
+								'ul',
+								{ className: 'title-merit' },
+								_react2.default.createElement(
+									'li',
+									{ className: 'title-lf' },
+									'上线前'
+								),
+								_react2.default.createElement(
+									'li',
+									{ className: 'title-rt' },
+									'上线后'
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'merit-conter' },
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-left mt2' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'由人工分析控费目标'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'执行艰难'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'监管不到位'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										' 事后追责难'
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-center' },
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement('span', { className: 'linetop' }),
+										_react2.default.createElement(
+											'a',
+											{ href: 'javascript:void(0)' },
+											'费用管理'
+										),
+										_react2.default.createElement('span', { className: 'line' })
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-right mt2' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'系统自动生成目标'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'落实到具体科室、人员'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'实时监管'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'追责明确'
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'merit-conter' },
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-left mt15' },
+									_react2.default.createElement(
+										'li',
+										null,
+										' 规则不明确、监管缺失'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										' 事后追责手工匹配到'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'责任科室、责任医生'
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-center' },
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement(
+											'a',
+											{ href: 'javascript:void(0)', className: 'green' },
+											'诊疗管理'
+										),
+										_react2.default.createElement('span', { className: 'line' })
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-right mt15' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'事前规划医保端规则、个性化规则'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'HIS界面实时提醒'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'事后追责自动明细到责任人'
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'merit-conter' },
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-left mt15' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'不符合多种结算病人'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'不能第一时间发现'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										' 经验性选择结算方式'
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-center' },
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement(
+											'a',
+											{ href: 'javascript:void(0)', className: 'yellow' },
+											'结算管理'
+										),
+										_react2.default.createElement('span', { className: 'line' })
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-right mt15' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'符合多种结算病人'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'第一时间提醒'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'择优推荐'
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'merit-conter' },
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-left mt15' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'由信息科、财务科支持 ',
+										_react2.default.createElement('br', null),
+										'难具体到医生维度'
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-center' },
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement(
+											'a',
+											{ href: 'javascript:void(0)', className: 'orange' },
+											'绩效管理'
+										),
+										_react2.default.createElement('span', { className: 'line' })
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-right mt15' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'各维度数据由系统自动 ',
+										_react2.default.createElement('br', null),
+										'生成'
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'merit-conter' },
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-left mt15' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'出入院处提醒'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'医生手工填写表格'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'通知医保科'
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-center' },
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement(
+											'a',
+											{ href: 'javascript:void(0)', className: 'purple' },
+											'流程优化'
+										),
+										_react2.default.createElement('span', { className: 'line' })
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-right mt15' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'系统自动提醒'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'HIS界面弹出表格'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'直接填写上传'
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'merit-conter' },
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-left mt15' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'传阅纸质文档'
+									),
+									_react2.default.createElement(
+										'li',
+										null,
+										'OA文档杂乱'
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-center' },
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement(
+											'a',
+											{ href: 'javascript:void(0)', className: 'pink' },
+											'通知公告'
+										),
+										_react2.default.createElement('span', { className: 'line' })
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-right mt25' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'专属医保文档发布、查看'
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'merit-conter' },
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-left mt15' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'设置规则需要 ',
+										_react2.default.createElement('br', null),
+										'技术人员写代码'
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-center' },
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement(
+											'a',
+											{ href: 'javascript:void(0)', className: 'c' },
+											'规则管理'
+										),
+										_react2.default.createElement('span', { className: 'line' })
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-right mt25' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'业务人员可自定义规则'
+									)
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'merit-conter last' },
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-left mt15' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'无系统医保 ',
+										_react2.default.createElement('br', null),
+										'知识库'
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-center' },
+									_react2.default.createElement(
+										'li',
+										null,
+										_react2.default.createElement('span', { className: 'line' }),
+										_react2.default.createElement(
+											'a',
+											{ href: 'javascript:void(0)', className: 'zsk' },
+											'知识库'
+										),
+										_react2.default.createElement('span', { className: 'linebot' })
+									)
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'merit-right mt15' },
+									_react2.default.createElement(
+										'li',
+										null,
+										'可查询医保政策、临床 ',
+										_react2.default.createElement('br', null),
+										'路径、基本医疗保险诊疗 ',
+										_react2.default.createElement('br', null),
+										'常规、药品说明书等'
+									)
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'yb-action' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'center' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'content-title' },
+								'功能介绍',
+								_react2.default.createElement(
+									'div',
+									{ className: 'content-text' },
+									' FUNCTION INTRODUCTION'
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'action-conter' },
+								_react2.default.createElement('img', { src: 'images/action-yb05-app.jpg', alt: '', className: 'yb-action-img' })
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'action-btm' },
+								_react2.default.createElement(
+									'dl',
+									null,
+									_react2.default.createElement(
+										'dt',
+										null,
+										'事前'
+									),
+									_react2.default.createElement(
+										'dd',
+										null,
+										'费用控制指标：科室总额、次均定额',
+										_react2.default.createElement('br', null),
+										'病种分值指标：医院病种分值、实际病例分值等'
+									)
+								),
+								_react2.default.createElement(
+									'dl',
+									{ className: 'dl-mg' },
+									_react2.default.createElement(
+										'dt',
+										null,
+										'事中'
+									),
+									_react2.default.createElement(
+										'dd',
+										null,
+										'实时预结算',
+										_react2.default.createElement('br', null),
+										'报销费用、自负费用'
+									)
+								),
+								_react2.default.createElement(
+									'dl',
+									{ className: 'dl-btm' },
+									_react2.default.createElement(
+										'dt',
+										null,
+										'事后'
+									),
+									_react2.default.createElement(
+										'dd',
+										{ className: 'tar' },
+										'事后报表：全院纬度、科室纬度 ',
+										_react2.default.createElement('br', null),
+										'医生纬度、病人纬度'
+									)
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						'ul',
+						{ className: 'page-icon' },
+						_react2.default.createElement('li', { className: 'lione' }),
+						_react2.default.createElement('li', { className: 'litwo' }),
+						_react2.default.createElement(
+							'li',
+							{ className: 'lithree' },
+							_react2.default.createElement('img', { src: 'images/smionic.png', alt: '' })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'yb-case' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'center' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'content-title' },
+								'典型案例',
+								_react2.default.createElement(
+									'div',
+									{ className: 'content-text' },
+									'APPLICATION CASE'
+								)
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'case-box' },
+								_react2.default.createElement('img', { src: 'images/yb-case-app.jpg', alt: '', className: 'app-left' }),
+								_react2.default.createElement('img', { src: 'images/yb-case-app-right.jpg', alt: '', className: 'app-right' })
+							),
+							_react2.default.createElement(
+								'ul',
+								{ className: 'app-ul' },
+								_react2.default.createElement(
+									'li',
+									null,
+									_react2.default.createElement('i', null),
+									_react2.default.createElement(
+										'p',
+										null,
+										'医院医保管理软件不仅仅能够满足我院现在的需求而且可以适应 ',
+										_react2.default.createElement('br', null),
+										'未来医院管理的要求 '
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									_react2.default.createElement('i', null),
+									_react2.default.createElement(
+										'p',
+										null,
+										'智能化管理平台'
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									_react2.default.createElement('i', null),
+									_react2.default.createElement(
+										'p',
+										null,
+										'提高医保基金使用效率'
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									_react2.default.createElement('i', null),
+									_react2.default.createElement(
+										'p',
+										null,
+										'有效降低医保扣费风险'
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									_react2.default.createElement('i', null),
+									_react2.default.createElement(
+										'p',
+										null,
+										'优化医院医保管理流程'
+									)
+								)
+							),
+							_react2.default.createElement('img', { src: 'images/wechat-userlist.jpg', alt: '', className: 'case-wx' })
+						)
+					)
+				);
+			}
+		}]);
+
+		return Main;
+	}(_react.Component);
 
 /***/ }
 /******/ ]);
