@@ -36,7 +36,7 @@ class Header extends Component{
 
     let _self = this;
     $.ajax({
-      url:'http://192.168.1.235:8082/imkb/imkbapp/searchApp',
+      url:'http://www.immortalshealth.com/imkb/imkbapp/searchApp',
       data:{
         queryStr:this.refs.search.value,
         pageSize: 20

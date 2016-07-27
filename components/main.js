@@ -47,7 +47,7 @@ class Mainblock extends Component{
       type:'SHOWLOADING'
     });
     $.ajax({
-      url:'http://192.168.1.235:8082/imkb/immoapp/searchApp',
+      url:'http://www.immortalshealth.com/imkb/immoapp/searchApp',
       data:{
         pageNo: this.props.pageNo,
         pageSize: 20,
@@ -67,6 +67,9 @@ class Mainblock extends Component{
             type:'UNSHOWLOADING'
           });
         },0);
+      },
+      error:function(code){
+        alert(code)
       }
     })
   }

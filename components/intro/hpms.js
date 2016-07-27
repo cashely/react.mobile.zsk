@@ -21,7 +21,7 @@ class Main extends Component{
 		return(
 			<div className="mobile">
 				<div className="main-ysgl">
-					<img src="/images/computer-img01-app.png" alt="" className="ddn-ysgl"/>
+					<img src="images/computer-img01-app.png" alt="" className="ddn-ysgl"/>
 					<img src="images/computer-img02-app.png" alt="" className="xdn-ysgl"/>
 					<div className="main-logo">医院药事管理软件</div>
 					<div className="app-hpms">HPMS</div>

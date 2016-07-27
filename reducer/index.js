@@ -1,3 +1,5 @@
+import React from 'react';
+import ObjectAssign from 'object-assign';
 import {combineReducers} from 'redux';
 
 var defaultState = {
@@ -8,11 +10,11 @@ var defaultState = {
 function index(state = defaultState ,action){
 	switch(action.type){
 		case 'LOADING' : 
-			return Object.assign(
+			return ObjectAssign(
 								{},state,{isLoading:true}
 							);
 		case 'UNLOAD' :
-			return Object.assign(
+			return ObjectAssign(
 								{},state,{isLoading:false}
 							);
 		default : return state;
@@ -22,11 +24,11 @@ function index(state = defaultState ,action){
 function header(state = {showNav:false,queryStr:''},action){
 	switch(action.type){
 		case 'SHOW' :
-			return Object.assign({},state,{showNav:true});
+			return ObjectAssign({},state,{showNav:true});
 		case 'UNSHOW' :
-			return Object.assign({},state,{showNav:false});
+			return ObjectAssign({},state,{showNav:false});
 		case 'SEARCH' :
-			return Object.assign({},state,{queryStr:action.queryStr});
+			return ObjectAssign({},state,{queryStr:action.queryStr});
 		default : return state;
 	}
 }
@@ -40,7 +42,7 @@ let defaultPageState = {
 function page(state = defaultPageState,action){
 	switch(action.type){
 		case 'LOADPAGE' :
-			return Object.assign({},state,{
+			return ObjectAssign({},state,{
 				content:action.content,
 				title:action.title
 			});
@@ -58,15 +60,15 @@ var defaultMain = {
 function main(state = defaultMain,action){
 	switch(action.type){
 		case 'CLEARDATA' :
-			return Object.assign({},state,{data:[]});
+			return ObjectAssign({},state,{data:[]});
 		case 'ADDDATA' :
-			return Object.assign({},state,{data:state.data.concat(action.data)});
+			return ObjectAssign({},state,{data:state.data.concat(action.data)});
 		case 'SHOWLOADING' :
-			return Object.assign({},state,{isLoading:true});
+			return ObjectAssign({},state,{isLoading:true});
 		case 'UNSHOWLOADING' :
-			return Object.assign({},state,{isLoading:false});
+			return ObjectAssign({},state,{isLoading:false});
 		case 'PAGE' :
-			return Object.assign({},state,{pageNo:action.pageNo});
+			return ObjectAssign({},state,{pageNo:action.pageNo});
 		default : return state;
 	}
 }
