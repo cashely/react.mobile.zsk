@@ -8,7 +8,7 @@ export default class Yyd extends Component{
 	render(){
 		return(
 			<div className="yyd">
-				<Header title={this.props.params.title}/>
+				<Header title={this.props.params.title} height='4.2rem'/>
 				<Main/>
 				<Footer/>
 			</div>
@@ -19,7 +19,7 @@ export default class Yyd extends Component{
 class Main extends Component{
 	render(){
 		return(
-			<div className="mobile">
+			<div className="mobile" style={{paddingTop:'4.2rem'}}>
 				<div className="main-yyd">
 					<div className="title">云药店（药店处方评价）</div>
 					<div className="app-hpms hpms-yyd">APMS</div>

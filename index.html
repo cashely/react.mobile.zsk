@@ -7,15 +7,22 @@
     <script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
     <script src="js/react.min.js"></script>
     <link rel="stylesheet" href="lib/fontAwsome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="lib/uiKit/css/uikit.gradient.min.css" />
     <link rel="stylesheet" href="style/index.css" />
     <script type="text/javascript">
       (function(){
         var iScale = 1;
-        iScale = iScale;
+        iScale = iScale / window.devicePixelRatio;
         document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=' + iScale + ',minimum-scale=' + iScale + ',maximum-scale=' + iScale + '">');
-         var deviceWidth = screen.width;
-        document.getElementsByTagName('html')[0].setAttribute('style', 'font-size:' + (deviceWidth > 750 ? '20' : deviceWidth / 750 * 20) + 'px');
+         $(window).resize(function () {
+            var deviceWidth = document.documentElement.clientWidth;
+            var Width = screen.width;
+            if (Width > 750) {
+              document.getElementsByTagName('html')[0].setAttribute('style', 'font-size:' + 20 + 'px');
+            } else {
+              document.getElementsByTagName('html')[0].setAttribute('style', 'font-size:' + deviceWidth / 750 * 20 + 'px');
+            }
+          })
+          $(window).resize();
       })(window)
     </script>
   </head>

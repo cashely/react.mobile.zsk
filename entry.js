@@ -4,7 +4,6 @@ import {Router,Route,hashHistory,browserHistory,useRouterHistory} from 'react-ro
 import { createHashHistory } from 'history';
 let history = useRouterHistory(createHashHistory)();
 //导入样式
-import './style/index.css';
 
 import './style/all.css';
 
@@ -50,8 +49,8 @@ const routerSencen = (
 					<Route path="yjk/:title" component={Yjk}/>
 					<Route path="gywm/:title" component={Gywm}/>
 					<Route path="sjpt/:title" component={Sjpt}/>
-					<Route path="yyd/:title" component={Sjpt}/>
-					<Route path="yyy/:title" component={Sjpt}/>
+					<Route path="yyd/:title" component={Yyd}/>
+					<Route path="yyy/:title" component={Yyy}/>
 				</Route>
 			</Router>
 		</Provider>

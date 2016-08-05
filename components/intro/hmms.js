@@ -8,7 +8,7 @@ export default class Hmms extends Component{
 	render(){
 		return(
 			<div className="ybgl">
-				<Header title={this.props.params.title}/>
+				<Header title={this.props.params.title}height='4.2rem'/>
 				<Main/>
 				<Footer/>
 			</div>
@@ -19,7 +19,7 @@ export default class Hmms extends Component{
 class Main extends Component{
 	render(){
 		return(
-			<div className="mobile">
+			<div className="mobile" style={{paddingTop:'4.2rem'}}>
 				<div className="main-ybgl">
 					<div className="video" style={{overflow: "hidden"}}>
 						<video id="example_video_2" className="video-js vjs-default-skin" controls preload="none"
@@ -261,7 +261,6 @@ class Main extends Component{
 										<li><i></i>
 											<p>优化医院医保管理流程</p></li>
 										</ul>
-										<img src="images/wechat-userlist.jpg" alt="" className="case-wx"/>
 									</div>
 								</div>
 							</div>

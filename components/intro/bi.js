@@ -23,7 +23,7 @@ class Main extends Component{
 			<div className="mobile">
 				<div className="main-bipt">
 					<img src="images/bipt-app.png" alt="" className="bipt-img"/>
-					<div className="main-logo">定制化BI分析平台</div>
+					<div className="main-logo">决策支持BI平台</div>
 					<div className="app-hpms">HPMS</div>
 					<p className="main-text">
 						通过建立标准编码体系，将产品各种特征信息按<br/>

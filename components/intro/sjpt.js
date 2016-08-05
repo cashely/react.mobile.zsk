@@ -8,7 +8,7 @@ export default class Sjpt extends Component{
 	render(){
 		return(
 			<div className="sjpt">
-				<Header title={this.props.params.title}/>
+				<Header title={this.props.params.title} height='4.2rem'/>
 				<Main/>
 				<Footer/>
 			</div>
@@ -19,7 +19,7 @@ export default class Sjpt extends Component{
 class Main extends Component{
 	render(){
 		return(
-			<div className="mobile">
+			<div className="mobile" style={{paddingTop:'4.2rem'}}>
 				<div className="main-sjpt">
 					<ul className="sjpt-timg">
 						 <li className="bg-blue">
@@ -59,7 +59,7 @@ class Main extends Component{
 						<i className="icon-sysm"></i>
 						 产品手册
 					</a>
-					 <ul classNames="page-icon">
+					 <ul className="page-icon">
 						<li className="lione"></li>
 						<li className="litwo"></li>
 						<li className="lithree"><img src="images/smionic.png" alt=""/></li>

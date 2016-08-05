@@ -19,7 +19,7 @@ class Nav extends Component{
         <ul className="uk-list-line uk-list">
           <li><Link to="intro/yyd/云药店">云药店</Link></li>
           <li><Link to="intro/yjk/云健康">云健康</Link></li>
-          <li><Link to="intro/yjk/云医院处方点评">云医院处方点评</Link></li>
+          <li><Link to="intro/yyy/云医院处方点评">云医院处方点评</Link></li>
           <li><Link to="intro/bi/决策支持BI平台">决策支持BI平台</Link></li>
           <li><Link to="intro/sjpt/医疗大数据中心平台">医疗大数据中心平台</Link></li>
           <li><Link to="intro/hpms/医院药事管理软件">医院药事管理软件</Link></li>

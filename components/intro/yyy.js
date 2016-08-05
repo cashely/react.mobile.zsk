@@ -8,7 +8,7 @@ export default class Yyy extends Component{
 	render(){
 		return(
 			<div className="yhospital">
-				<Header title={this.props.params.title}/>
+				<Header title={this.props.params.title} height='4.2rem'/>
 				<Main/>
 				<Footer/>
 			</div>
@@ -19,7 +19,7 @@ export default class Yyy extends Component{
 class Main extends Component{
 	render(){
 		return(
-			<div className="mobile">
+			<div className="mobile" style={{paddingTop:'4.2rem'}}>
 				<div className="main-yyy">
 					 <img src="images/app-yhospital-ddn.png" alt="" className="ddn"/>
 					 <img src="images/app-yhospital-xdn.png" alt="" className="xdn"/>

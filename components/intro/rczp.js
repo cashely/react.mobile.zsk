@@ -8,7 +8,7 @@ export default class Rczp extends Component{
 	render(){
 		return(
 			<div className="rczp">
-				<Header title={this.props.params.title}/>
+				<Header title={this.props.params.title} height='4.2rem'/>
 				<Main/>
 				<Footer/>
 			</div>
@@ -19,7 +19,7 @@ export default class Rczp extends Component{
 class Main extends Component{
 	render(){
 		return(
-			 <div className="main">
+			 <div className="main" style={{paddingTop:'4.2rem'}}>
 				<div className="content-title">
 					人才招聘
 					<div className="content-text">TALENT RECRUITMENT</div>

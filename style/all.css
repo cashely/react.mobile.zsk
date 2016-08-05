@@ -16,7 +16,7 @@ header{
   display: flex;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 5;
   width: 100%;
   background-color: #07a2e9;
   align-items: center;

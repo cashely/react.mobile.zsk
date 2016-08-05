@@ -8,7 +8,7 @@ export default class Gywm extends Component{
 	render(){
 		return(
 			<div className="gywm">
-				<Header title={this.props.params.title}/>
+				<Header title={this.props.params.title} height='4.2rem'/>
 				<Main/>
 				<Footer/>
 			</div>
@@ -19,7 +19,7 @@ export default class Gywm extends Component{
 class Main extends Component{
 	render(){
 		return(
-			<div>
+			<div style={{paddingTop:'4.2rem'}}>
 				<div className="main">
 					<div className="content-title">
 						关于我们

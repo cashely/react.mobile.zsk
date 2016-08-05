@@ -131,16 +131,17 @@ a {
 }
 footer .app-copyright {
   display: block;
-  width: 30rem;
-  height: 2.3rem;
-  line-height: 2.3rem;
+  width: 27.5rem;
+  line-height: 1rem;
   margin: 0px auto;
-  background: url("/images/logo-blue.png") no-repeat left center;
+  background: url("../images/logo-blue.png") no-repeat left center;
   background-size: 3rem 2.15rem;
   padding-left: 3.25rem;
   color: #6a6a6a;
   font-size: .8rem;
   text-align: left;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
 }
 .app-top {
   width: 100%;
@@ -161,7 +162,7 @@ footer .app-copyright {
   display: block;
   width: 2.6rem;
   height: 1.8rem;
-  background: url("/images/app-yhospital-pullDown.png") no-repeat;
+  background: url("../images/app-yhospital-pullDown.png") no-repeat;
   background-size: 100%;
   margin-top: 1.35rem;
   position: absolute;
@@ -169,7 +170,7 @@ footer .app-copyright {
   left: 1.7rem;
 }
 .hover {
-  background: url("/images/app-yhospital-pullDown-hover.png") no-repeat;
+  background: url("../images/app-yhospital-pullDown-hover.png") no-repeat;
   background-size: 100%;
 }
 .navbar-collapse {
@@ -222,9 +223,8 @@ footer .app-copyright {
   letter-spacing: 0;
 }
 .mobile .sysm {
-  margin: 0 auto 2.9rem auto;
-  width: 100%;
-  height: 100%;
+  margin: 0 auto 0rem auto;
+  display: inline-block;
   font-size: 1rem;
   background: #eee;
   color: #4F7291;
@@ -232,12 +232,14 @@ footer .app-copyright {
 }
 .mobile .sysm .icon-sysm {
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  background: url("/images/sysm.png") no-repeat;
+  width: 1.1rem;
+  height: 1.3rem;
+  background: url("../images/manual_icon.png") no-repeat;
   background-size: 100% 100%;
   vertical-align: middle;
-  margin-top: -3px;
+  margin-top: -0.1rem;
+  margin-right: 3px;
+  margin-left: 3px;
 }
 body {
   width: 100%;
@@ -249,7 +251,7 @@ body {
 .main-ysgl {
   padding-top: 3.5rem;
   text-align: center;
-  background: url("/images/bg-ysgl-app.jpg") no-repeat center top;
+  background: url("../images/bg-ysgl-app.jpg") no-repeat center top;
   background-size: 100% 11.25rem;
   background-color: white;
 }
@@ -293,7 +295,7 @@ body {
   margin: 1.25rem auto;
 }
 .main-ysgl .action .action-app {
-  width: 35.05rem;
+  width: 35.1rem;
   height: 20.65rem;
 }
 .core ul {
@@ -364,7 +366,7 @@ body {
   background: #0B8ECA;
 }
 .mobile .main-sjpt {
-  background: url("/images/bg-sjpt-app.jpg") no-repeat center top;
+  background: url("../images/bg-sjpt-app.jpg") no-repeat center top;
   background-size: 100% 11.1rem;
   background-color: white;
   text-align: center;
@@ -496,7 +498,7 @@ body {
   margin-bottom: .75rem;
 }
 .mobile .main-bipt {
-  background: url("/images/bg-bipt-app.jpg") no-repeat center top;
+  background: url("../images/bg-bipt-app.jpg") no-repeat center top;
   background-size: 100% 13.6rem;
   background-color: white;
 }
@@ -563,7 +565,7 @@ body {
   width: 18.3rem;
   height: 10.4rem;
   margin: .6rem  auto;
-  background: url("/images/bipt01-app.jpg") no-repeat center;
+  background: url("../images/bipt01-app.jpg") no-repeat center;
   background-size: 18.3rem 10.4rem;
 }
 .mobile .img-group p {
@@ -578,14 +580,14 @@ body {
 .mobile .imgtop {
   width: 27.9rem;
   height: 13.95rem;
-  background: url("/images/bipt05-app.jpg") no-repeat center;
+  background: url("../images/bipt05-app.jpg") no-repeat center;
   background-size: 100%;
   margin: 0 auto;
 }
 .mobile .imgbot {
   width: 27.9rem;
   height: 14rem;
-  background: url("/images/bipt06-app.jpg") no-repeat center;
+  background: url("../images/bipt06-app.jpg") no-repeat center;
   background-size: 100%;
   margin: 1rem auto 1.5rem auto;
 }
@@ -621,7 +623,7 @@ body {
 .main-yyy {
   padding-top: 3.4rem;
   text-align: center;
-  background: url("/images/app-yhospital-bg.jpg") no-repeat center top;
+  background: url("../images/app-yhospital-bg.jpg") no-repeat center top;
   background-size: 100% 11.35rem;
   background-color: white;
 }
@@ -665,14 +667,18 @@ body {
   width: 19.7rem;
   height: 13.1rem;
 }
+.ykl .mobile {
+  background: #fff;
+}
 .main {
   padding-top: 3.85rem;
   text-align: center;
-  background: url("/images/bg-yjk-app.jpg") no-repeat center top;
+  background: url("../images/bg-yjk-app.jpg") no-repeat center top;
   background-size: 100% 13.1rem;
   background-color: white;
 }
 .yjk-title {
+  color: #0396d3;
   margin-top: -1rem;
   margin-bottom: 0;
 }
@@ -683,7 +689,8 @@ body {
   font-size: .9rem;
 }
 .maintop-text {
-  width: 14rem;
+  display: inline-block;
+  color: #0396d3;
   font-size: 1.2rem;
   text-align: right;
   letter-spacing: .1rem;
@@ -693,19 +700,21 @@ body {
   display: inline-block;
   width: 1.8rem;
   height: 1.8rem;
-  background: url("/images/yjk-icon-app01.png") no-repeat;
+  background: url("../images/yjk-icon-app01.png") no-repeat;
   background-size: 1.8rem;
   top: -0.55rem;
   left: 0;
 }
 .yjk-tal {
   width: 27.55rem;
+  display: block;
+  margin: 0 auto;
 }
 .jiaoyu {
   background: white;
 }
 .jiaoyu .icon {
-  background: url("/images/yjk-icon-app02.png") no-repeat;
+  background: url("../images/yjk-icon-app02.png") no-repeat;
   background-size: 1.8rem;
 }
 .jiaoyu .content-title {
@@ -728,15 +737,29 @@ body {
   margin: 1.25rem auto 0 auto;
 }
 .jiaoyu .bot-img {
-  width: 29rem;
+  width: 29.1rem;
   height: 12.5rem;
   margin: .85rem auto 2.5rem auto;
+  background: url("../images/yjk-bot_bod.png") no-repeat center;
+  background-size: 100% ;
+}
+.jiaoyu .bot-img:before {
+  content: "";
+  display: table;
+}
+.jiaoyu .bot-img .bot-p {
+  text-align: left;
+  font-size: .9rem;
+  line-height: 1.3rem;
+  margin-top: 1.2rem;
+  margin-left: 1.3rem ;
+  color: #0396d3;
 }
 .mobile {
   text-align: center;
 }
 .mobile .main-ybgl {
-  background: url("/images/bg-ybgl-app.jpg") no-repeat center top;
+  background: url("../images/bg-ybgl-app.jpg") no-repeat center top;
   background-size: 100% 13.65rem;
   padding-top: 5.5rem;
   background-color: white;
@@ -761,6 +784,7 @@ body {
   width: 27.5rem;
   margin: .5rem auto .8rem auto;
   color: #888;
+  line-height: 1.3rem;
 }
 .mobile .yb-merit {
   width: 27.5rem;
@@ -790,7 +814,7 @@ body {
   height: 100%;
   font-size: .8rem;
   display: table;
-  margin-bottom: 1rem;
+  margin-bottom: .8rem;
 }
 .mobile .yb-merit .merit-conter:after {
   content: "";
@@ -851,32 +875,32 @@ body {
 .mobile .yb-merit .merit-conter .merit-center li .linetop {
   display: block;
   width: 1px;
-  height: 35px;
+  height: 1.75rem;
   position: absolute;
   top: -35px;
   left: 50%;
   z-index: 1;
-  background: url("/images/linetop.png") no-repeat;
+  background: url("../images/linetop.png") no-repeat;
 }
 .mobile .yb-merit .merit-conter .merit-center li .linebot {
   display: block;
   width: 1px;
-  height: 35px;
+  height: 1.75rem;
   position: absolute;
   bottom: -1.75rem;
   left: 50%;
   z-index: 1;
-  background: url("/images/linebot.png") no-repeat;
+  background: url("../images/linebot.png") no-repeat;
 }
 .mobile .yb-merit .merit-conter .merit-center li a {
-  width: 14px;
+  width: .7rem;
   position: relative;
   z-index: 2;
   display: inline-block;
   color: #fff;
   border-radius: 30px;
   background: #0396D3;
-  line-height: 15px;
+  line-height: .9rem;
   padding: .5rem .5rem;
 }
 .mobile .yb-merit .merit-conter .merit-center li a.green {
@@ -1025,19 +1049,12 @@ body {
   overflow: hidden;
   margin-top: .9rem;
 }
-.mobile .case-wx {
-  position: absolute;
-  bottom: 0;
-  right: 10rem;
-  width: 4.95rem;
-  height: 4.95rem;
-}
 .hpms-yyd {
   margin-bottom: 1rem;
 }
 .mobile .main-yyd {
   padding-top: 16.8rem;
-  background: url("/images/bg-yyd-app.jpg") no-repeat center top;
+  background: url("../images/bg-yyd-app.jpg") no-repeat center top;
   background-size: 100% 15.6rem;
   background-color: white;
 }
@@ -1066,7 +1083,7 @@ body {
   margin: 1.25rem auto 0 auto;
 }
 .rczp .main {
-  background: url("/images/bg-rczp-app.jpg") no-repeat;
+  background: url("../images/bg-rczp-app.jpg") no-repeat;
   background-size: 100% 15.65rem;
   padding-top: 16.4rem;
 }
@@ -1083,9 +1100,12 @@ body {
   margin-top: 1rem;
 }
 .gywm .main {
-  background: url("/images/bg-gywm-app.jpg") no-repeat;
+  background: url("../images/bg-gywm-app.jpg") no-repeat;
   background-size: 100% 15.65rem;
   padding-top: 16.4rem;
+}
+.gywm .mgt {
+  margin-top: 13rem;
 }
 .gywm .mn-logo {
   width: 4.9rem;
@@ -1109,7 +1129,7 @@ body {
 }
 .gywm .gywm-mianbot {
   width: 34.15rem;
-  margin: 3.25rem auto 2.25rem auto;
+  margin: 2.25rem auto 2.25rem auto;
 }
 .error .rest {
   width: 37.5rem;
@@ -1122,7 +1142,7 @@ body {
   width: 19.05rem;
   height: 18.65rem;
   margin-left: 3.8rem;
-  background: url("/images/index-404-app.jpg") no-repeat;
+  background: url("../images/index-404-app.jpg") no-repeat;
   background-size: 100%;
 }
 .error .rest .text {
@@ -1157,7 +1177,7 @@ body {
   height: 25rem;
   background-color: white;
   text-align: center;
-  background: url("/images/bg-continue-app.jpg") no-repeat center bottom;
+  background: url("../images/bg-continue-app.jpg") no-repeat center bottom;
   background-size: 35.35rem 19.2rem;
 }
 .continued .continued-conter .text {

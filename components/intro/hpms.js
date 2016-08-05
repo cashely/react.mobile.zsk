@@ -8,7 +8,7 @@ export default class Hpms extends Component{
 	render(){
 		return(
 			<div className="ysgl">
-				<Header title={this.props.params.title}/>
+				<Header title={this.props.params.title} height='4.2rem'/>
 				<Main/>
 				<Footer/>
 			</div>
@@ -19,7 +19,7 @@ export default class Hpms extends Component{
 class Main extends Component{
 	render(){
 		return(
-			<div className="mobile">
+			<div className="mobile" style={{paddingTop:'4.2rem'}}>
 				<div className="main-ysgl">
 					<img src="images/computer-img01-app.png" alt="" className="ddn-ysgl"/>
 					<img src="images/computer-img02-app.png" alt="" className="xdn-ysgl"/>
