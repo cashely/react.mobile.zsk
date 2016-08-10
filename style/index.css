@@ -5,7 +5,7 @@ html {
 body {
   margin: 0px;
   padding: 0px;
-  font-size: 14px;
+  /*font-size: 14px;*/
   font-family: Helvetica, Microsoft Yahei, Arial, sans-serif;
 }
 p,
@@ -91,13 +91,7 @@ a {
   opacity: 0.8;
   color: white;
 }
-.main-text {
-  height: 90px;
-  line-height: 22px;
-  opacity: 0.8;
-  letter-spacing: 2px;
-  color: white;
-}
+
 .hpms {
   width: 110px;
   height: 30px;
@@ -131,14 +125,15 @@ a {
 }
 footer .app-copyright {
   display: block;
-  width: 27.5rem;
+  width: 30rem;
+  height:1rem;
   line-height: 1rem;
   margin: 0px auto;
   background: url("../images/logo-blue.png") no-repeat left center;
   background-size: 3rem 2.15rem;
   padding-left: 3.25rem;
   color: #6a6a6a;
-  font-size: .8rem;
+  font-size: .9rem;
   text-align: left;
   padding-top: .75rem;
   padding-bottom: .75rem;
@@ -191,12 +186,12 @@ footer .app-copyright {
   color: white;
 }
 .app-hpms {
+  font-size: 1.1rem;
   display: inline-block;
   line-height: 100%;
   margin: 0px auto;
   color: #194b77;
   background: #e2f1f9;
-  font-size: 0.9rem;
   font-weight: 900;
   opacity: 1;
   padding: .25rem .3rem;
@@ -205,7 +200,7 @@ footer .app-copyright {
   height: 100%;
 }
 .mobile .main-logo {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #59BBEA;
   opacity: 1;
   margin-top: 0px;
@@ -213,39 +208,46 @@ footer .app-copyright {
   margin-bottom: .5rem;
 }
 .mobile .main-text {
-  font-size: .9rem;
-  width: 34.1rem;
+  font-size:1.1rem;
+  /*width: 34.1rem;*/
   height: 100%;
   color: #777;
   margin: 0 auto;
   opacity: 1;
   line-height: 1.4rem;
-  letter-spacing: 0;
+}
+.main-yyd .main-text {
+ height: 8.5rem;
+}
+.main-bipt  .main-text {
+  height: 5.5rem;
+}
+.main-sjpt  .main-text {
+  height: 5.5rem;
+}
+.main-ysgl .main-text {
+  height: 4.5rem;
 }
 .mobile .sysm {
   margin: 0 auto 0rem auto;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.2rem;
   background: #eee;
   color: #4F7291;
   padding: .5rem .45rem;
 }
 .mobile .sysm .icon-sysm {
   display: inline-block;
-  width: 1.1rem;
-  height: 1.3rem;
+  width: 1.2rem;
+  height: 1.4rem;
   background: url("../images/manual_icon.png") no-repeat;
   background-size: 100% 100%;
   vertical-align: middle;
   margin-top: -0.1rem;
-  margin-right: 3px;
+  margin-right: 8px;
   margin-left: 3px;
 }
 body {
-  width: 100%;
-  height: 100%;
-  margin-right: auto;
-  margin-left: auto;
   text-align: center;
 }
 .main-ysgl {
@@ -269,12 +271,12 @@ body {
 }
 .main-ysgl .mgtSixteen {
   margin-top: .75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
-.main-ysgl .sysm-ysgl {
-  margin-top: 1.25rem;
-  margin-bottom: 2.5rem;
-}
+/*.main-ysgl .sysm-ysgl {*/
+  /*margin-top: 1.25rem;*/
+  /*margin-bottom: 2.5rem;*/
+/*}*/
 .main-ysgl .title {
   margin-bottom: 2rem;
   margin-top: 2.25rem;
@@ -303,7 +305,7 @@ body {
   margin: 1.25rem auto 2rem auto;
 }
 .core ul li {
-  font-size: .9rem;
+  font-size: 1.1rem;
   color: #888;
 }
 .core ul li .num {
@@ -337,14 +339,14 @@ body {
   color: white;
 }
 .case .center .case-p {
-  font-size: .9rem;
+  font-size: 1.1rem;
   color: #fff;
   line-height: 1.7rem;
   margin-top: 1.85rem;
   letter-spacing: 1px;
 }
 .case .center .case-p span {
-  font-size: 24px;
+  font-size:1.6rem;
   color: #FACE02;
   margin-right: 3px;
 }
@@ -465,6 +467,8 @@ body {
   margin: 0px 2.3rem 0px 4.4rem;
 }
 .mobile .sjpt-p {
+  height: 100%;
+
   font-size: 1rem;
   color: #13A0E1;
   margin: .6rem auto;
@@ -530,6 +534,7 @@ body {
   float: left;
   margin: 0;
   text-align: left;
+  width: 16.35rem;
   margin-top: 1.1rem;
 }
 .mobile .bipt-list-group .list-right {
@@ -548,6 +553,7 @@ body {
 .mobile .bipt-list-group .list-right div {
   text-align: left;
   float: left;
+  width: 16.35rem;
   margin-top: .6rem;
 }
 .mobile .bipt-img {
@@ -569,10 +575,12 @@ body {
   background-size: 18.3rem 10.4rem;
 }
 .mobile .img-group p {
+  /*display: inline-block;*/
   margin-top: .5rem;
   margin-bottom: 1rem;
   color: #888;
-  font-size: .9rem;
+  height:2.8rem;
+  font-size: 1.1rem;
 }
 .mobile .bipt-case {
   background-color: #fff;
@@ -600,13 +608,13 @@ body {
   background-image: none;
 }
 .content-title {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #59BBEA;
   text-align: center;
   letter-spacing: 1px;
 }
 .content-title .content-text {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   margin-top: 2px;
   color: #ACAAAA;
 }
@@ -614,7 +622,7 @@ body {
   width: 27.5rem;
 }
 .title {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #59BBEA;
   text-align: center;
   letter-spacing: 1px;
@@ -643,10 +651,12 @@ body {
   margin-top: 2.8rem;
 }
 .main-yyy .app-text {
-  font-size: 0.9rem;
-  line-height: 1.4rem;
+  zoom: 1;
+  font-size: 1.1rem;
+  height: 7.5rem;
+  line-height: 1.5rem;
   color: #8e8d8d;
-  width: 34.1rem;
+  width:100%;
   margin: .9rem auto 1.1rem auto;
 }
 .main-yyy .app-hdl {
@@ -679,19 +689,18 @@ body {
 }
 .yjk-title {
   color: #0396d3;
-  margin-top: -1rem;
   margin-bottom: 0;
 }
 .app-text {
   line-height: 2.4rem;
   color: #777;
   margin: 0 auto .25rem;
-  font-size: .9rem;
+  font-size:1.1rem;
 }
 .maintop-text {
   display: inline-block;
   color: #0396d3;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   text-align: right;
   letter-spacing: .1rem;
   margin: 2.25rem auto .75rem auto;
@@ -699,11 +708,9 @@ body {
 .maintop-text .icon {
   display: inline-block;
   width: 1.8rem;
-  height: 1.8rem;
+  height: 2rem;
   background: url("../images/yjk-icon-app01.png") no-repeat;
   background-size: 1.8rem;
-  top: -0.55rem;
-  left: 0;
 }
 .yjk-tal {
   width: 27.55rem;
@@ -780,11 +787,12 @@ body {
   display: none;
 }
 .mobile .yb-main-text {
-  font-size: .9rem;
-  width: 27.5rem;
-  margin: .5rem auto .8rem auto;
+  font-size: 1.1rem;
+  width: 100%;
+  height: 6.8rem;
+  margin: .8rem auto 1rem auto;
   color: #888;
-  line-height: 1.3rem;
+  line-height: 1.4rem;
 }
 .mobile .yb-merit {
   width: 27.5rem;
@@ -1064,10 +1072,10 @@ body {
 .mobile .main-yyd .main-text {
   margin-bottom: .85rem;
 }
-.mobile .sysm-yyd {
-  margin-top: .9rem;
-  margin-bottom: 2.4rem;
-}
+/*.mobile .sysm-yyd {*/
+  /*margin-top: .9rem;*/
+  /*margin-bottom: 2.4rem;*/
+/*}*/
 .mobile .status {
   width: 37.5rem;
   height: 17rem;
@@ -1113,8 +1121,10 @@ body {
 }
 .gywm .gywm-p {
   color: #777;
-  font-size: .9rem;
-  line-height: 1.5rem;
+  width:100%;
+  height:4.5rem;
+  font-size: 1rem;
+  line-height: 1.6rem;
   margin-bottom: 1.25rem;
 }
 .gywm .gywm-img {
@@ -1199,4 +1209,23 @@ body {
   border-bottom-color: #89CCF8;
   border-bottom-width: 1px;
   border-bottom-style: solid;
+}
+
+.main-block dl{
+  padding: 1rem 5%;
+}
+.main-block .dl-list dt{
+ height:100%;
+}
+.main-block .dl-list dt span{
+ margin-left:.5rem;
+}
+.dl-sublist{
+  font-size: .8rem;
+  color:#777;
+  text-align: left;
+  height: 100%;
+}
+.dl-sublist span{
+ float:right;
 }
