@@ -78,9 +78,14 @@ class Mainblock extends Component{
     var results = this.props.data.map(function(e,s){
           return (
             <Link to={`page/${e.id}`}  key={e.id+s}>
-              <dl>
-                <dt><i style={{marginRight:'5px',color:'#797979'}} className="fa fa-lg fa-book"></i></dt>
-                <dd><span dangerouslySetInnerHTML={{__html:e.genericName}}></span> - {e.manufacturerShort || e.fileName}</dd>
+              <dl className="dl-list">
+                <dt>
+                  <i style={{marginRight:'0px',color:'#0D95D3'}} className="fa fa-lg fa-book"></i>
+                  <span dangerouslySetInnerHTML={{__html:e.genericName}}></span>
+                </dt>
+                <dd>
+                  <div className="dl-sublist">{e.spec}&nbsp;{e.manufacturerShort || e.fileName}<span>{e.releaseDate|| e.smsDate}</span> </div>
+                </dd>
               </dl>
             </Link>
           );

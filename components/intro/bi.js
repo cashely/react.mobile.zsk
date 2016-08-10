@@ -8,7 +8,7 @@ export default class Bi extends Component{
 	render(){
 		return(
 			<div className="bipt">
-				<Header title={this.props.params.title}/>
+				<Header title={this.props.params.title} height='4.2rem'/>
 				<Main/>
 				<Footer/>
 			</div>
@@ -20,7 +20,7 @@ export default class Bi extends Component{
 class Main extends Component{
 	render(){
 		return(
-			<div className="mobile">
+			<div className="mobile" style={{paddingTop:'4.2rem'}}>
 				<div className="main-bipt">
 					<img src="images/bipt-app.png" alt="" className="bipt-img"/>
 					<div className="main-logo">决策支持BI平台</div>
