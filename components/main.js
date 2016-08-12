@@ -80,7 +80,7 @@ class Mainblock extends Component{
             <Link to={`page/${e.id}`}  key={e.id+s}>
               <dl className="dl-list">
                 <dt>
-                  <i style={{marginRight:'0px',color:'#0D95D3'}} className="fa fa-lg fa-book"></i>
+                  <div className="dl-list-icon">说明书</div>
                   <span dangerouslySetInnerHTML={{__html:e.genericName}}></span>
                 </dt>
                 <dd>
