@@ -17,28 +17,28 @@ header{
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  display: -webkit-flex;
   position: fixed;
   top: 0;
   z-index: 5;
   width: 100%;
   background-color: #07a2e9;
   align-items: center;
+  -webkit-align-items: center;
 }
 .header-left{
   align-items: center;
+  -webkit-align-items: center;
   padding: 0 .7rem;
   text-align: left;
 }
 .header-right{
-  -moz-box-flex: 1;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
+  -webkit-flex: 1;
   display: flex;
+  display: -webkit-flex;
   align-items: center;
+  -webkit-align-items: center;
 }
 .header-title{
   display: block;
@@ -57,16 +57,12 @@ header{
   vertical-align: -13%;
 }
 .header-right form{
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
+  display: -webkit-flex;
 }
 .header-right input{
-  -moz-box-flex: 1;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
+  -webkit-flex: 1;
   font-size: 1.05rem;
   border-radius: 0.42rem;
   border:1px solid #d9d9d9;
@@ -85,6 +81,7 @@ header{
   /*display: flex;*/
   margin: 0;
   align-items: center;
+  -webkit-align-items: center;
   border-bottom:1px solid #e1e1e1;
   /*line-height: 3;*/
   text-align: left;
