@@ -535,7 +535,7 @@ body {
   margin: 0;
   text-align: left;
   width: 16.35rem;
-  margin-top: 1.1rem;
+  margin-top: 1.15rem;
 }
 .mobile .bipt-list-group .list-right {
   float: none;
@@ -554,7 +554,7 @@ body {
   text-align: left;
   float: left;
   width: 16.35rem;
-  margin-top: .6rem;
+  margin-top: .55rem;
 }
 .mobile .bipt-img {
   width: 20.1rem;
@@ -1217,11 +1217,24 @@ body {
 .main-block .dl-list dt{
  height:100%;
 }
+.dl-list-icon{
+  width: 3rem;
+  height: 1.4rem;
+  line-height:1.4rem;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .8rem;
+  text-align: center;
+  border-radius: .4rem;
+  background: #0D95D3;
+  color: #fff;
+}
 .main-block .dl-list dt span{
  margin-left:.5rem;
+  vertical-align: middle;
 }
 .dl-sublist{
-  font-size: .8rem;
+  font-size: 1.1rem;
   color:#777;
   text-align: left;
   height: 100%;
